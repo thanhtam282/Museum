@@ -1,0 +1,16 @@
+{
+    "SETUP": {
+        "index": {
+            "header": [
+                "header/h-7"
+            ],
+            "body": [
+                "news/n-4",
+                "news-details/n-1"
+            ],
+            "footer": [
+                "footer/f-6"
+            ]
+        }
+    }
+}
