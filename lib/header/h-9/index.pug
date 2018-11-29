@@ -1,0 +1,64 @@
+header.canhcam-header-12
+	.k-menu-bar.container
+		#logo.mr-auto
+		#language
+			a(href='#')
+				img(src="./img/_global/us_lang.png", alt="")
+		button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
+			i.mdi.mdi-menu
+	#demoResAllInOneMenu.container.k-responsive-menu
+		.k-menu-bar
+			.k-logo.navbar-brand.mr-auto
+				img(src="./img/_global/logo.png", alt="")
+			button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
+				i.mdi.mdi-close
+		.k-logo.navbar-brand(k-menu-map-to="#logo")
+			img(src="./img/_global/logo.png", alt="")
+		.nav.mainnav.ml-auto
+			.wrapper-top
+				ul.nav-top.nav
+					li.nav-top-item
+						a.nav-top-link(href='#') Hotline:  
+							span 0283 8258 783
+					li.nav-top-item
+						a.nav-top-link(href='#') Hỗ trợ khách hàng 
+					li.nav-top-item
+						a.nav-top-link(href='#') Tin tức 
+					li.nav-top-item
+						a.nav-top-link(href='#') Liên hệ
+				.language
+					a(href='#')
+						img(src="./img/_global/us_lang.png", alt="")
+
+			.wrapper
+				ul.nav
+					li.nav-item
+						a.nav-link(href='#') 
+							i.material-icons home
+							span Trang Chủ
+
+					li.nav-item
+						a.nav-link(href='#')  giới thiệu
+					li.nav-item
+						a.nav-link(href='#')  bộ sưu tập 
+					li.nav-item
+						a.nav-link(href='#') chương trình giáo dục
+					li.nav-item
+						a.nav-link(href='#') triển lãm
+					li.nav-item
+						a.nav-link(href='#') tham quan
+					
+				a.search 
+					i.material-icons search
+				.input-group.ff
+					input.form-control(type='text', placeholder="Search", aria-label="Search", aria-describedby='basic-addon2')
+					.input-group-append
+						button.btn.btn-primary(type='submit')
+							i.fa.fa-search
+			#contactinfotel
+			#contactinfo
+		.register
+			a(href="#")
+				p Đăng ký thuyết minh
+				
+

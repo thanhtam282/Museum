@@ -1,0 +1,295 @@
+@import ../../_includes
+
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-header-12
+	background: color-get($mau,trang)
+	box-shadow: 0 0 5px rgba(0,0,0,.5)
+	&.fixedheader
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 999
+		transition: all .25s ease-in-out
+	.searchbar
+		+pad(1rem)
+		color: lighten(color-get($mau,main),30%)
+		.input-group
+			width: 100%
+			input, button
+				+bor-rad(0)
+			input
+				border: 1px solid color-get($mau,trang)
+			button
+				background: darken(color-get($mau,trang),0%)
+				color: color-get($mau,main)
+				border-color: darken(color-get($mau,trang),0%)
+	.k-menu-bar
+		color: color-get($mau,main)
+		.k-button-toggle
+			color: color-get($mau,main)
+		.navbar-brand
+			img
+				max-height: 2rem
+		.nav
+			.nav-item
+				.nav-link
+					color: color-get($mau,main)
+
+	.k-responsive-menu
+		background: color-get($mau,trang)
+		.navbar-brand
+			color: color-get($mau,trang)
+			img
+				max-height: 2rem
+		button
+			color: color-get($mau,den)
+		.nav
+			.nav-item, .nav-top-item
+				.nav-link, .nav-top-link
+					display: flex
+					text-transform: capitalize
+					padding: 0.5rem 1rem
+					color: lighten(color-get($mau,main),30%)
+					span
+						display: block
+						padding-left: .5rem
+					i
+						display: none
+				&:hover, &.activ, &.show
+					.nav-link, .nav-top-link
+						text-decoration: none
+						color: color-get($mau,main-dark)
+				.nav-link
+					span
+						padding: 0
+			.language
+				display: none
+		.wrapper
+			.search
+				display: none
+			.ff
+				input
+					padding: .5rem 1rem
+				button
+					i
+						color: lighten(color-get($mau,main),30%)
+		.k-menu-bar
+			.k-button-toggle
+				color: color-get($mau,main)
+		.register
+			a
+				p
+					color: lighten(color-get($mau,main),30%)
+					padding: 0.5rem 1rem
+					&:hover
+						color: color-get($mau,main-dark)
+						text-decoration: none
+				&:hover
+					text-decoration: none
+
+
+	// CHANGE MENU
+
+	+media-breakpoint-up(lg)
+		.topbar
+			justify-content: flex-end
+			display: flex
+			height: 38px
+			+transition(.3s all ease-in-out)
+		.k-responsive-menu
+			align-items: unset
+			background: color-get($mau,trang)
+			padding-top: 0
+			padding-bottom: 0
+			position: relative
+			.navbar-brand
+				+flex-center()
+			
+				img 
+					max-height: 5.2rem
+					+transition(.3s all ease-in-out)
+			.wrapper, .wrapper-top
+				display: flex
+				width: 100%
+				align-items: center
+
+				justify-content: flex-end
+			.nav
+				justify-content: flex-end
+				align-items: center
+				width: 100%
+				position: relative
+				&.nav-top
+					+transition(.3s all ease-in-out)
+					+pad(1rem null 5px null)
+					.nav-top-item
+						position: relative
+						padding: 0 1rem
+						// + .nav-top-item
+						// &:last-child
+						// 	padding: 0
+						.nav-top-link
+							padding: 0
+							+fz(r(13px))
+							color: color-get($mau,text-9)
+							+flex-center()
+							span
+								+fz(r(18px))
+								font-weight: bold
+								color: color-get($mau,main)
+							&:hover
+								text-decoration: none
+								color: color-get($mau,main)
+						&:nth-child(3), &:nth-child(4)
+							&:after
+								display: block
+								position: absolute
+								content: ""
+								left: 0
+								top: 50%
+								transform: translateY(-50%)
+								background: color-get($mau,text-9)
+								width: 1px
+								height: 1rem
+				.language
+					display: block
+					+transition(.3s all ease-in-out)
+					+pad(1rem null 5px null)
+					a
+						position: relative
+
+
+				.nav-item
+					+ .nav-item
+						margin-left: 1rem
+					.nav-link
+						color: color-get($mau,text-3)
+						text-transform: uppercase
+						+pad(r(17px) 0)
+						+fz(r(15px))
+						span
+							display: none
+						i
+							display: block
+							text-transform: none
+							+fz(r(15px))
+							color: color-get($mau,main)
+				.search
+					cursor: pointer
+					color: color-get($mau,text-3)
+					text-transform: uppercase
+					// +pad(r(18px) 0)
+					margin-left: 1rem
+					+fz(r(15px))
+					display: block
+					i
+						text-transform: none
+						+fz(1.5rem)
+						color: color-get($mau,main)
+					
+				.input-group
+					position: absolute
+					right: 0
+					width: 200px
+					transition: .3s all ease-in-out
+					display: none
+					top: 100%
+					input
+						&:focus
+							outline: none
+					&.active
+						display: flex
+							
+					&:hover, &.active, &.show
+						.nav-link
+							color: color-get($mau,main)
+			.mainnav
+				padding-right: 1.5rem
+				display: flex
+				flex-direction: column
+				.searchbar
+
+			.register
+				height: auto
+				a
+					p
+						+transition(.3s all ease-in-out)
+						display: flex
+						align-items: flex-end
+						background: color-get($mau, main-dark)
+
+						position: relative
+						height: 100%
+						font-size: 1rem
+						text-transform: uppercase
+						text-align: center
+						width: 107px
+						+pad(null r(12px) r(12px))
+						color: color-get($mau,main-light)
+						&:after
+							+transition(0s all ease-in-out)
+							position: absolute
+							display: block
+							top: .5rem
+							content: "\e85e"
+							font-family: "Linearicons-Free"
+							color: color-get($mau,main-light)
+							font-size: 2rem
+							left: 50%
+							transform: translateX(-50%)
+						&:hover
+							background: color-get($mau, trang)
+							// border: 1px solid  color-get($mau,main-dark)
+							box-shadow: 0px 0px 0px 2px color-get($mau,main) inset
+							color: color-get($mau,main-dark)
+							&:after
+								color: color-get($mau,main-dark)
+		&.fixedheader
+			&.active
+				.topbar
+					height: 0px
+					overflow: hidden
+				.k-responsive-menu
+					.mainnav
+						.nav-top, .language
+							height: 0px
+							margin-top: 0
+							overflow: hidden
+							padding: 0
+						
+					.navbar-brand 
+						img
+							max-height: 2.5rem
+					.register
+						p
+							
+							
+							padding: 1rem .5rem
+							&:after
+								display: none
+	+media-breakpoint-up(xl)
+		.k-responsive-menu
+			.navbar-brand
+				img 
+					max-height: 6.2rem
+			.nav
+				.nav-item
+					+ .nav-item
+						// + .nav-item
+						margin-left: r(40px)
+					&:nth-child(2)
+						margin-left: r(20px)
+
+					.nav-link
+						+pad(r(17px) 0)
+						text-transform: uppercase
+		&.fixedheader
+			&.active
+				.k-responsive-menu
+					.navbar-brand 
+						img
+							max-height: 3.5rem

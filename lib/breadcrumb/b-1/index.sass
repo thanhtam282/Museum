@@ -1,0 +1,44 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-breadcrumb-1
+	position: relative
+	background: color-get($mau,trang-duc)
+	.main-breadcrumb
+		width: 100%
+		z-index: 100
+		+media-breakpoint-up(md)
+			display: block
+		.breadcrumb
+			margin-bottom: 0
+			+bor-rad(0)
+			+pad(0)
+			position: relative
+			background: none
+			+opacity(.8)
+			.breadcrumb-item
+				+fz(r(15px))
+				+fz(500)
+				+pad(.75rem .5rem)
+				position: relative
+				line-height: 1.5rem
+				color: color-get($mau,xam-8)
+				display: flex
+				align-items: center
+				&:first-child
+					padding-left: 0
+					padding-right: 0
+				a
+					color: color-get($mau,xam-8)
+					i
+						+fz(r(18px))
+				+ .breadcrumb-item
+					&:before
+						color: color-get($mau,xam-8)
+						content: '\f142'
+						font: normal normal normal 24px/1 "Material Design Icons"
+						line-height: 1
+						+fz(1.5rem)
+						overflow: hidden

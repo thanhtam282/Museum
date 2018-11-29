@@ -1,16 +1,28 @@
 {
-    "SETUP": {
-        "index": {
-            "header": [
-                "header/h-7"
-            ],
-            "body": [
-                "news/n-4",
-                "news-details/n-1"
-            ],
-            "footer": [
-                "footer/f-6"
-            ]
-        }
-    }
+	"SETUP": {
+		"index": {
+			"header": [
+				"header/h-9"
+			],
+			"body": [
+				"news/n-4",
+				"news-details/n-1",
+				"home/h-1",
+				"home/h-2"
+			],
+			"footer": [
+				"footer/f-6",
+				"footer/f-1"
+			]
+		},
+		"intro": {
+			"body": [
+				"intro/i-1",
+				"intro/i-2",
+				"intro/i-3",
+				"intro/i-4",
+				"breadcrumb/b-1"
+			]
+		}
+	}
 }

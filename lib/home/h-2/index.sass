@@ -1,0 +1,286 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-home-2
+	position: relative
+	.info, .news, .event
+		padding-top: r(37px)
+		.title
+			font-size: r(22px)
+			color: color-get($mau,text-6)
+			font-weight: 600
+		.detail
+			// +mar(1rem .5rem  0 .5rem  )
+			// overflow: hidden
+			// +mar(null r(15px))
+			margin: 0
+			background: color-get($mau, trang-duc2)
+			.time, .location
+				+pad(r(25px) null)
+				h5
+					color: color-get($mau,text-9)
+					text-transform: uppercase
+					text-align: right
+					line-height: r(25px)
+					margin: 0
+				h4
+					color: color-get($mau,text-3)
+					text-transform: uppercase
+					text-align: left
+					display: flex
+					justify-content: space-between
+					// margin: 0
+					span
+						color: color-get($mau,main)
+						font-weight: 600
+						text-align: right
+				p
+					color: color-get($mau,text-9)
+			.location
+				border-top:  1px dashed color-get($mau,text-9)
+				h4
+					margin: 0
+					line-height: r(25px)
+					text-transform: none
+				
+			.more
+				.reg
+					border: 1px solid color-get($mau,trang)
+					+pad(1rem .5rem)
+					a
+
+						h3
+							+flex-center()
+							flex-direction: column
+							color: color-get($mau,text-6)
+							margin: 0
+							+fz(1rem)
+							text-transform: uppercase
+							i
+								color: color-get($mau,trang)
+								display: block
+								border-radius: 50%
+								+wh(r(42px))
+								+fz(1.5rem)
+								background: color-get($mau, main)
+								margin-bottom: 1rem
+								+media-breakpoint-down(lg)
+									+fz(1rem)
+								&:before
+									line-height: r(42px)
+						text-decoration: none
+	.news
+		.title
+			display: flex
+			justify-content: space-between
+			i
+				text-align: right
+				+fz(r(18px))
+				color: color-get($mau,text-6)
+		.hot-news
+			position: relative
+			margin: 0
+			.img
+			figcaption
+				+pad(1rem)
+				position: absolute
+				bottom: 0
+				a
+					h5
+						overflow: hidden
+						text-overflow: ellipsis
+						display: -webkit-box
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						color: color-get($mau,trang)
+					&:hover
+						text-decoration: none
+
+		.sub-news
+			+pad(r(13px) r(13px) r(13px) 0)
+			border-top: 1px solid #cccccc
+			a
+				h5
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					+fz(1rem)
+					margin: 0
+					color: color-get($mau,text-6)
+				&:hover
+					text-decoration: none
+
+
+	.event
+		.title
+			display: flex
+			justify-content: space-between
+			i
+				text-align: right
+				+fz(r(18px))
+				color: color-get($mau,text-6)
+			.play
+				display: none
+		.list-items
+			margin-bottom: 0
+			.slick-dots
+				top: r(-32px)
+				bottom: auto
+				display: flex
+				justify-content: flex-end
+				right: 2rem
+				li
+					margin: 0
+					button
+						padding: 0
+						&:before
+							+fz(.9rem)
+		.social
+			+flex-center()
+			+pad(r(40px) null r(25px) null)
+			a
+				+mar(null .5rem)
+				+media-breakpoint-up(lg)
+					+mar(null 1rem)
+				+wh(r(54px))
+				+bor-rad(50%)
+				background: color-get($mau, xam-1)
+				transition: .3s all ease-in-out
+				+flex-center()
+				i
+					color: color-get($mau,trang)
+					+fz(r(20px))
+				&:hover
+					text-decoration: none
+					box-shadow: 0px 0px 0px 2px color-get($mau,xam-1) inset
+					background: color-get($mau, trang)
+					i
+						color: color-get($mau,xam-1)
+
+		.dropdown
+			background: transparent
+			-webkit-appearance: none
+			.dropdown-toggle
+				position: relative
+				width: 100%
+				text-align: left
+				color: color-get($mau,text-6)
+				background: color-get($mau, trang)
+				border-radius: 0
+				border: 1px solid color-get($mau, xam-a)
+				+pad(r(11px) r(21px)  r(7px) r(21px))
+				+fz(r(15px))
+				&:after
+					pointer-events: none
+					position: absolute
+					content: "\f107"
+					font-family: 'FontAwesome'
+					border: 0
+					top: 25%
+					transform: translateY(-50%)
+					right: 2rem
+					color: color-get($mau,text-6)
+					font-weight: bold
+				&:focus
+					box-shadow:  none
+			#link::-webkit-scrollbar-track
+				// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+				// border-radius: 10px
+				background-color: color-get($mau,xam-1)
+				margin-right: 1rem
+			#link::-webkit-scrollbar
+				background-color: color-get($mau,xam-1)
+				margin-right: 1rem
+			#link::-webkit-scrollbar-thumb
+				margin-right: 1rem
+				// border-radius: 10px
+				border: 1px solid color-get($mau,xam-1)
+				// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+				background: color-get($mau, trang)
+					
+			.dropdown-menu
+				+pad(0 )
+				height: 23.5rem
+				overflow-y: scroll
+				width: 100%
+				text-align: left
+				margin: 0
+				a
+					position: relative
+					color: color-get($mau,text-6)
+					background: color-get($mau, trang)
+					border-radius: 0
+					border: 1px solid color-get($mau, xam-a)
+					border-bottom: 0
+					+pad(r(11px) r(21px)  r(7px) r(21px))
+					+fz(r(15px))
+					&:last-child
+						border-bottom: 1px solid color-get($mau, xam-a)
+
+					&:hover
+						background: color-get($mau, main)
+						color: color-get($mau,trang)
+	&:after
+		position: absolute
+		top: -3rem
+		content: ""
+		display: block
+		+wh(100%)
+		background-image: url('../img/home/home_bg.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+		pointer-events: none
+		z-index: -1
+		
+	.gallery
+		.title
+			padding-top: 3rem
+			font-size: r(22px)
+			color: color-get($mau,text-6)
+			font-weight: 600
+			display: flex
+			justify-content: space-between
+			padding-bottom: 1rem
+			i
+				text-align: right
+				+fz(r(18px))
+				color: color-get($mau,text-6)
+	.link-item
+
+		.item
+			margin: 0
+			+media-breakpoint-down(md)
+				margin-bottom: 2rem
+			.img
+				box-shadow: 0px 3px 8px 0px  color-rgba(color-get($mau,den),.2) 
+				img
+					transition: .5s all ease-in-out
+			figcaption
+				h4
+					+pad(r(17px) null r(20px) null)
+					margin: 0
+					color: color-get($mau,main)
+					+fz(r(20px))
+					text-transform: uppercase
+				p
+					color: color-get($mau,text-6)
+					text-align: left
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 4
+					-webkit-box-orient: vertical
+		&:hover
+			text-decoration: none
+			+media-breakpoint-up(lg)
+				.item
+					.img
+						overflow: hidden
+						img
+							transform: scale(1.1)
+

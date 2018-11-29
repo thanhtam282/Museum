@@ -1,0 +1,175 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-intro-2
+	+pad(3rem null)
+	.head-title
+		+fz(r(30px))
+		font-family: 'Open Sans'
+		text-align: center
+		span
+			font-weight: bold
+	.wrapper 
+		ul
+			+flex-center()
+			margin: 0
+			+media-breakpoint-down(md)
+				flex-wrap: wrap
+			li
+				margin-right: 1px
+				a
+					+flex-center()
+					text-align: center
+					background: color-get($mau, bg-xam)
+					display: block
+					+wh(100%)
+					+pad(r(12px) r(16px))
+					+fz(r(18px))
+					color: color-get($mau,text-3)
+					&:hover
+						text-decoration: none
+					
+				&:last-child
+					margin: 0
+				+media-breakpoint-down(md)
+					flex: 0 0 50%
+					margin: 0
+					padding: 1px
+					a
+						+pad(1rem)
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+					margin: 0
+					padding: 1px
+					a
+						+pad(1rem)
+						
+			li.active
+				a
+					background: color-get($mau, main)
+					color: color-get($mau,trang)
+	.history
+		+pad(  r(50px) r(80px)   r(100px) r(100px) )
+		background: color-rgba(color-get($mau,bg-1),.4)
+		+media-breakpoint-down(md)
+			+pad(2rem 1.5rem)
+		ul
+			transition: .5s all ease-in-out
+			+pad( r(25px) 0 r(40px) 0)
+			justify-content: center
+			border: 0
+			li
+				margin: 0
+				a
+
+					+fz(r(24px))
+					+mar(0 30px)
+					padding: 0
+					border: 0 !important
+					color: color-get($mau,text-1)
+					&:hover
+						border: 0
+				a.active
+					border: 0
+					border-radius: 0 !important
+					height: 100% !important
+					background: transparent !important
+					color: color-get($mau,main-dark)
+				+media-breakpoint-down(xs)
+					a
+						margin: 0
+						margin-right: 1rem
+						+fz(1.5rem)
+
+
+		.y1929-tab, .y1945-tab, .y1956-tab, .y2012-tab
+			.detail
+				height: 100%
+				+flex-center()
+				align-items: end
+				flex-direction: column
+
+				.tab-title
+					padding-bottom: .5rem
+					+fz(30px)
+					text-transform: uppercase
+					color: color-get($mau,do-2)
+					position: relative
+					font-family: 'Open Sans'
+					&:after
+						position: absolute
+						display: block
+						content: ""
+						width: r(37px)
+						height: 2px
+						background: color-get($mau, vang-3)
+						bottom: 0
+						left: 0
+				p
+					+pad(r(24px) r(50px) 0 0)
+					+fz(r(15px))
+					+media-breakpoint-down(md)
+						+pad(1.2rem 0 0 0)
+						+fz(1.1rem)
+			figure
+				+media-breakpoint-down(md)
+					margin-top: 1.5rem
+
+				.img
+					position: relative
+					&:before
+						display: block
+						content: url("../img/01_gioithieu/gioithieu_lichsu_bg.png")
+						position: absolute
+						+wh(100%)
+						bottom: -1.5rem
+						right:  -1.5rem
+						+media-breakpoint-down(md)
+							display: none
+					img
+						// z-index: 999
+						position: relative
+						+media-breakpoint-down(md)
+							width: 100%
+	.mess
+		padding-top: r(80px)
+		+media-breakpoint-down(md)
+			padding-top: 3rem
+		.head-title
+			+pad(r(25px) null)
+			&:after
+				display: block
+				position: absolute
+				content: ""
+				width: 3rem
+				height: 1px
+				left: 50%
+				transform: translateX(-50%)
+				top: 0
+				background: color-get($mau, den)
+	.quote
+		p
+			+fz(15px)
+			+pad(0 0 r(20px) 0)
+			span
+				text-transform: uppercase
+				font-weight: 600
+			&:first-child
+				padding-top: 0
+			&:last-child
+				+pad(1rem  0 0  1rem )
+				border-left: 2px solid color-get($mau,main)
+		figure
+			height: 100%
+			+media-breakpoint-down(md)
+				background-image: none
+				margin: 0
+				margin-top: 1rem
+
+	.quote2
+		padding-top: 1rem
+		p
+			+fz(15px)
+			+pad(r(20px) 0 0 0)

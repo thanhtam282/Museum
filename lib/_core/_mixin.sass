@@ -22,3 +22,16 @@
 			background-color: #{$hover}
 		&:active, &:focus , &.active, &.activated
 			background-color: #{$active}
+
+@function r($size) 
+	$remSize: $size / 14px
+	@return #{$remSize}rem
+
+@mixin flex-center()
+	display: flex
+	justify-content: center
+	align-items: center
+
+@mixin wh($size)
+	width: $size
+	height: $size

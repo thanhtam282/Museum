@@ -4,65 +4,68 @@
 //////////////////////////////////////
 
 .canhcam-footer-6
-	background-color: darken(color-get($mau,trang) ,85%)
-	position: relative
-	z-index: 1
-	overflow: hidden
-	color: darken(color-get($mau,trang) ,40%)
-	+media-breakpoint-down(xs)
-		text-align: center
-	h4
-		color: darken(color-get($mau,trang) ,80%)
-		text-transform: uppercase
-		position: relative
-		+fz(1.2rem)
-		+fw(600)
-		margin-bottom: 1.5rem
-	.linkfooter
-		padding: 3rem 0
-		+media-breakpoint-up(md)
-			+pad(4rem 0)
-		.list-group
-			.list-group-item
-				display: inline-block
-				+bg(none, none, none)
-				border: 0
-				+pad(.5rem 0)
-				+media-breakpoint-up(md)
-					+pad(.15rem 0)
-				a
-					font-size: .9rem
-					+link(darken(color-get($mau,trang) ,40%),color-get($mau,main),color-get($mau,main))
-	.copyright
-		background: color-get($mau,trang)
-		+pad(1rem 0)
-		color: darken(color-get($mau,trang) ,30%)
-		.list-group
-			.list-group-item
-				display: inline-block
-				+bg(none, none, none)
-				border: 0
-				+pad(.5rem 0)
-				a
-					font-size: .9rem
-					+link(darken(color-get($mau,trang) ,30%),darken(color-get($mau,trang) ,70%),darken(color-get($mau,trang) ,70%))
-			+media-breakpoint-up(md)
-				display: flex
-				flex-direction: row
-				.list-group-item
-					+pad(.15rem 0)
+	.fill
+		+pad(1rem null)
+		background: color-get($mau, trang-duc)
+		.link
+			height: 100%
+			+flex-center()
+			padding-bottom: .5rem
+			+media-breakpoint-up(lg)
+				padding-bottom: 0
+				justify-content: flex-start
+			ul
+				margin: 0
+				li
+					text-transform: uppercase
+					+ li
+						padding-left: 1rem
 					a
-						margin-right: calc(1rem + 1px)
-						position: relative
-						&:after
-							display: inline-flex
-							width: 1px
-							height: 100%
-							content: ''
-							+pos(abs, 0 -.5rem null null)
-							background: darken(color-get($mau,trang) ,30%)
-					&:last-child
-						a
-							margin-right: 0
-							&:after
-								content: none
+						color: color-get($mau,text-6)
+						&:hover
+							color: color-get($mau,main)
+							text-decoration: none
+		.input-group
+			input
+				+bor-rad(0)
+				color: color-get($mau,text-6)
+			::-webkit-input-placeholder
+				color: color-get($mau,text-9)
+			.input-group-append
+				button
+					+bor-rad(0)
+					width: r(80px)
+					+media-breakpoint-up(lg)
+						&:hover
+							background: color-get($mau, trang)
+							box-shadow: 0px 0px 0px 1px color-get($mau,main) inset
+							color: color-get($mau,main)
+	.info
+		background: color-get($mau, trang)
+		+pad(1rem null)
+		.wrapper
+			display: flex
+			margin: 0
+			+media-breakpoint-down(sm)
+				flex-direction: column
+				align-items: center
+			img
+				max-height: 4rem
+			figcaption
+				display: flex
+				flex-direction: column
+				justify-content: flex-end
+				p
+					+fz(r(13px))
+					padding-left: 2rem
+					color: color-get($mau,text-6)
+					+media-breakpoint-down(sm)
+						padding-left: 0
+						padding-top: 1rem !important
+					span
+						color: color-get($mau,text-9)
+				p:last-child
+					padding-top: .5rem
+					color: color-get($mau,text-6)
+
+

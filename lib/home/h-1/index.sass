@@ -1,0 +1,73 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-home-1
+	overflow-x: hidden
+	.list-items
+		margin: 0
+		.item
+			position: relative
+			min-height: 350px
+			+media-breakpoint-up(sm)
+				// min-height: 320px
+			+media-breakpoint-up(md)
+				min-height: 380px
+			+media-breakpoint-up(lg)
+				min-height: 93vh
+			// .title
+			// 	+pos(abs, 50% null null 0)
+			// 	width: 100%
+			// 	transform: translateY(-50%)
+			// 	color: color-get($mau,trang)
+			// 	.text
+			// 		text-align: right
+			// 		.group_1, 
+			// 			h2
+			// 				+fz(r(30px))
+			// 				font-weight: bold
+			// 				text-shadow: 3px 2px 1rem color-rgba(color-get($mau,den),.3)
+			// 				+media-breakpoint-down(md)
+			// 					+fz(1.5rem)
+			// 		.group_2
+			// 			padding-top: r(31px)
+			// 			p
+			// 				color: color-get($mau,gold-1)
+			// 				+fz(r(30px))
+			// 				font-weight: bold
+			// 				text-shadow: 3px 2px 1rem color-rgba(color-get($mau,den),.3)
+			// 			+media-breakpoint-down(md)
+			// 				padding-top: 1rem
+			// 				p
+			// 					+fz(1.5rem)
+		.slick-dots
+			// position: relative
+			+pad(1rem null r(30px) null)
+			+media-breakpoint-down(md)
+				+pad(1rem  null)
+			// background: color-get($mau,main)
+			bottom: 0
+			li
+				// +flex-center()
+				margin: 0
+				+fz(r(17px))
+				white-space: nowrap
+				border: 1px solid color-get($mau,main)
+				width: r(305px)
+				height: r(50px)
+				background: color-get($mau, main)
+				position: relative
+				color: color-get($mau,trang)
+				text-transform: uppercase
+				&.slick-active
+					background: color-get($mau, but-1)
+					position: relative
+				p
+					line-height: r(50px)
+				+media-breakpoint-down(md)
+					height: 2.5rem
+					p
+						line-height: 2.5rem
+
+					
