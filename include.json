@@ -8,7 +8,11 @@
 				"news/n-4",
 				"news-details/n-1",
 				"home/h-1",
-				"home/h-2"
+				"home/h-2",
+				"pagination/p-1",
+				"sub-news/sn-1",
+				"social/s-1",
+				"breadcrumb/b-1"
 			],
 			"footer": [
 				"footer/f-6",
@@ -21,7 +25,44 @@
 				"intro/i-2",
 				"intro/i-3",
 				"intro/i-4",
-				"breadcrumb/b-1"
+				"intro/i-5"
+			]
+		},
+		"news": {
+			"body": [
+				"news/n-1",
+				"news/n-2"
+			]
+		},
+		"news_details": {
+			"body": [
+				"news_details/nd-1"
+			]
+		},
+		"gallery": {
+			"body": [
+				"gallery/g-1"
+			]
+		},
+		"d_subject": {
+			"body": [
+				"d_subject/ds-1"
+			]
+		},
+		"gallery_detail": {
+			"body": [
+				"gallery_detail/gd-1",
+				"gallery_detail/gd-2"
+			]
+		},
+		"collect_bvqg": {
+			"body": [
+				"collect_bvqg/c-1"
+			]
+		},
+		"show-detail": {
+			"body": [
+				"show_detail/s-1"
 			]
 		}
 	}

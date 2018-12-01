@@ -1,0 +1,34 @@
+section.canhcam-collect-bvqg-1(bg-img='./img/_global/bg_1.png')
+	.container
+		.row
+			.col-md-3
+				ul.nav 
+					li.nav-item.active
+						a.nav-link  Hiện vật tiêu biểu
+						ul.list-unstyled
+							li
+								a.active(href="#") Cổ Khí Minh Mạng
+							li
+								a(href="#") Bảo vật Quốc Gia
+					li.nav-item
+						a(href="#").nav-link Cơ sở dữ liệu sưu tầm
+					li.nav-item
+						a(href="#").nav-link Hệ thống trưng bày
+				a(href="#")
+			.col-md-9
+				.row
+					.col
+						h2.news-title BẢO VẬT QUỐC GIA
+				.row
+					.col
+						h3.top-title 11 BẢO VẬT QUỐC GIA
+						.quote
+							p Trong năm 2012 và năm 2013, Thủ tướng chính phủ ban hành quyết định số 1426/QĐ-TTg ngày 01/10/2012 và quyết định số 2599/QĐ-TTg ngày 30/12/2013 công nhận 67 Bảo vật Quốc gia của Việt Nam. Trong đó, Bảo tàng Lịch sử - Thành phố Hồ Chí Minh được công nhận 11 Bảo vật quốc gia, chiếm tỷ lệ 1/6 so với cả nước. 
+							p Đặc biệt, 11 Bảo vật quốc gia lưu giữ ở Bảo tàng Lịch sử Thành phố Hồ Chí Minh đều thuộc nghệ thuật Phật giáo và Hindu giáo của nền Văn hóa Phù Nam - Óc Eo (thế kỷ 1-7) và văn hóa Champa (thế kỷ 2-17) phát triển từ xa xưa ở Nam bộ và Trung bộ Việt Nam. Đây là những tác phẩm nghệ thuật vừa thể hiện giá trị lịch sử văn hóa - tín ngưỡng tộc người vừa thể hiện giá trị thẩm mỹ của kỹ thuật đương thời mang tính bản địa của các thành phần dân tộc Việt Nam trong quá khứ, góp phần làm phong phú kho tàng di sản văn hóa Việt Nam. 
+				.row.item
+					- for ( var x = 1; x < 7; x ++)
+						.col-lg-4.col-md-6
+							img.w-100(src='./img/04_bosuutap/04_BVQG/bvqg_6.png', alt='')
+				.row
+					.col
+						include ../../pagination/p-1/index.pug

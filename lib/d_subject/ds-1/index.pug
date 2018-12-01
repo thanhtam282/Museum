@@ -1,0 +1,22 @@
+section.canhcam-d-subject-1(bg-img='./img/_global/bg_1.png')
+	.container
+		.row
+			.col
+				ul.nav
+					li.nav-item.active
+						a(href="#") Giờ học Sử
+					li.nav-item
+						a(href="#") Hội thi Vẽ
+		.row
+			.col
+				h2.head-title Hội thi Vẽ
+		.row
+			- for (var x = 0 ; x < 6; x ++)
+				.col-lg-4.col-md-6
+					a(href="#")
+						figure
+							.img
+								img.w-100(src='./img/03_hoithive/03_hoithive_2.png', alt='')
+							figcaption
+								h4 Ngày vẽ “Em yêu Sử Việt”
+								time 08/06/2018

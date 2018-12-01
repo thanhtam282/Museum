@@ -1,0 +1,40 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-intro-5
+	+pad(r(83px) null )
+	.title
+		padding-top: 1.5rem
+		+fz(r(30px))
+		color: #0e0e0e
+		height: 100%
+		+media-breakpoint-up(md)
+			border-right: 2px solid color-get($mau,main)
+		&:after
+			display: block
+			position: absolute
+			content: ""
+			width: 3rem
+			height: 1px
+			top: 0
+			background: color-get($mau, den)
+
+	.depart
+		h4
+			+pad( null null r(17px) null )
+			+media-breakpoint-down(md)
+				+pad( 1rem null 1rem null )
+			+fz(18px)
+			margin: 0
+			font-weight: 600
+			color: #b52b1d
+		p
+			+fz(r(15px))
+			color: #4b4b4b
+	.depart:last-child
+		h4
+			+pad( r(80px) null r(17px) null ) 
+			+media-breakpoint-down(md)
+				+pad( 1rem null 1rem null )

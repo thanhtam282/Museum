@@ -50,6 +50,41 @@ a
 p
 	margin: 0
 
+
+
+.news-title
+	text-align: center
+	+fz(r(35px))
+	text-transform: uppercase
+	// padding-bottom: 1rem
+	margin: 0
+	&:after
+		left: 50%
+		transform: translateX(-50%)
+		position: absolute
+		display: block
+		content: ""
+		width: r(50px)
+		height: 2px
+		background: color-get($mau, main)
+		bottom: 0
+.head-title
+	+fz(r(30px))
+	font-family: 'Open Sans'
+	text-align: center
+	+pad(r(25px) null)
+	&:after
+		display: block
+		position: absolute
+		content: ""
+		width: 3rem
+		height: 1px
+		left: 50%
+		transform: translateX(-50%)
+		top: 0
+		background: color-get($mau, den)
+	span
+		font-weight: bold
 	
 [ripple]
 	z-index: 1

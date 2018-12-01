@@ -1,0 +1,47 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-news-details-1, .canhcam-subject-details-1
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.news-read
+		text-align: start
+		margin-bottom: 2rem
+		.title
+
+			+fz(24px)
+			color: color-get($mau,main)
+			+media-breakpoint-down(md)
+				+fz(1.5rem)
+		time
+			color: color-get($mau,text-9)
+		p
+			+pad(1rem null)
+			+fz(18px)
+			+media-breakpoint-down(md)
+				+fz(1.2rem)
+			+media-breakpoint-down(sm)
+				+fz(1rem)
+			&:first-child
+				padding-bottom: r(30px) 
+				color: color-get($mau,text-6)
+		.ps
+			font-weight: 600
+			text-align: right
+		figure
+			margin: 0
+			img
+				border-radius: 0
+				border: none
+			figcaption
+				padding-top: 1rem
+				color: color-get($mau,text-3)
+		a
+			&:hover
+				text-decoration: none
+
+
+

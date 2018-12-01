@@ -1,0 +1,15 @@
+extends _layout/layout.pug
+block variables
+	- var title = "show_detail"
+	- var description = "Description for show_detail page"
+	- var bodyclass = "show_detail"
+	- var href = "/show_detail.html"
+block header
+	include ../lib/header/h-9/index.pug
+block body
+	include ../lib/intro/i-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/show_detail/s-1/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug
+	include ../lib/footer/f-6/index.pug

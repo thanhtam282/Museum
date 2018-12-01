@@ -1,0 +1,59 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-d-subject-1
+	+pad(3rem null)
+	.nav
+		padding-bottom: r(40px)
+		+flex-center
+		.nav-item
+			margin: 0
+			text-align: center
+			+media-breakpoint-down(sm)
+				flex: 0	0 70%
+				+ .nav-item
+					margin-top: 3px
+			a
+				+fz(r(20px))
+				color: color-get($mau,text-3)
+				+pad(.5rem r(60px) )
+				display: block
+				background: color-get($mau, bg-xam)
+		.nav-item.active
+			a
+				background: color-get($mau, main)
+				color: color-get($mau,trang)
+	a
+		text-decoration: none
+		figure
+			.img
+				overflow: hidden
+				img
+					transition: .5s all ease-in-out
+			figcaption
+				+pad(1rem)
+				h4
+					+fw(600)
+					color: color-get($mau,text-3)
+					font-size: r(16px)
+					position: relative
+					font-weight: 600
+					&:after
+						top: .5rem
+						content: ""
+						position: absolute
+						display: block
+						left: -1rem
+						background: color-get($mau, main)
+						+wh(5px)
+				time
+					+fz(r(15px))
+					+fw(600)
+					color: color-get($mau,text-9)
+		+media-breakpoint-up(md)
+			&:hover
+				figure
+					img
+						transform: scale(1.1)

@@ -1,0 +1,36 @@
+section.canhcam-collect-ckmm-1(bg-img='./img/_global/bg_1.png')
+	.container
+		.row
+			.col-md-3
+				ul.nav 
+					li.nav-item.active
+						a.nav-link  Hiện vật tiêu biểu
+						ul.list-unstyled
+							li
+								a.active(href="#") Cổ Khí Minh Mạng
+							li
+								a(href="#") Bảo vật Quốc Gia
+					li.nav-item
+						a(href="#").nav-link Cơ sở dữ liệu sưu tầm
+					li.nav-item
+						a(href="#").nav-link Hệ thống trưng bày
+				a(href="#")
+			.col-md-9
+				.row
+					.col
+						h2.news-title BẢO VẬT QUỐC GIA
+				.row
+					.col
+						h3.top-title 11 BẢO VẬT QUỐC GIA
+						.quote
+							p Năm 1838, Minh Mạng đổi quốc hiệu từ Việt Nam thành Đại Nam và cuối năm ấy ra lệnh đúc Cổ khí. Việc sản xuất các đồ mỹ nghệ làm cho quần chúng quan tâm và là niềm vinh dự của các triều vua xưa. Các triều đại Thương, Chu đã tiên phong cho khắc các tư tưởng, các ngạn ngữ luân lý trên các đồ vật. Các vua nhà Thương như vua Thành Thang cho khắc các tư tưởng trên chiếc khay, vua Võ Vương nhà Chu cho khắc lời giáo huấn trên ghế và gậy. Vua Minh Mệnh cũng học theo tư tưởng đó, ra lệnh cho thợ đúc cổ vật xong, lại lệnh cho quần thần đem những bài thơ Ngự chế về tư tưởng kính trời yêu dân, răn dạy con cháu và các quan… khắc trên cổ vật nhằm để răn mình tu sửa khuyết điểm, lo việc nhà, giữ công lý. 
+							p Cổ khí là 33 loại đồ đựng bằng đồng phỏng theo các loại đồ đựng thời Tam Đại và được dùng để tế lễ, trên đó khắc những bài minh văn chữ Hán lấy ý từ những tác phẩm kinh điển của Nho giáo hợp thành một hệ thống quan điểm về chính trị. Cổ khí Minh Mạng được sử dụng đặt trên các bàn thờ cúng tế trời và tổ tiên. Cổ khí có thể được phân phối đặt trong hệ thống miếu thờ của Nhà Nguyễn như Thái Miếu, Thế Miếu, Hưng Miếu, Triệu Miếu, điện Phụng Tiên… và các nơi thờ cúng khác nhau mà vua thường xuyên phải có mặt khi cử hành lễ tế. 
+							p Sưu tập “Cổ khí thời Nguyễn” lưu giữ tại Bảo tàng Lịch sử TP.HCM giới thiệu 12 cổ khí, mặc dù không đầy đủ về số lượng nhưng cho thấy được sự độc đáo của loại hình này, qua đó hiểu được phần nào tư tưởng lớn lao của vị vua này trong việc trị nước an dân. Tư tưởng tề gia, trị quốc, bình thiên hạ được thể hiện rất rõ trong các bài minh, được tập hợp trong Ngự chế minh văn cổ khí đồ. 
+
+				.row.item
+					- for ( var x = 1; x < 7; x ++)
+						.col-lg-4.col-md-6
+							img.w-100(src='./img/04_bosuutap/04_CKMM/ckmm_3.png', alt='')
+				.row
+					.col
+						include ../../pagination/p-1/index.pug

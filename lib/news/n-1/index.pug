@@ -1,0 +1,44 @@
+section.canhcam-news-4(bg-img='./img/_global/bg_1.png')
+	article.news-hot
+		.container
+			.row
+				.col
+					h2.news-title Tin tức
+			.row
+				.col-lg-6.top-list
+					a.item(href="#")
+						figure
+							.img
+								img.w-100(src="./img/02_tintuc/tintuc_big.png", alt="alt")
+							figcaption
+								h3 Rome - bảo tàng vĩ đại của thế giới 
+								p Rome nổi tiếng với những công trình kiến trúc đặc sắc và  có cả một quốc gia độc lập nằm trọn bên trong.  trình kiến trúc đặc sắc và  có cả một quốc gia độc lập nằm trọn bên trong.
+								time 12/12/2017
+ 
+
+				.col-lg-6.part-list
+					.row
+						- for(var x = 0; x < 3; x++)
+							.col-12
+								a.item(href="#")
+									figure
+										.img
+											img.img-fluid(src="./img/02_tintuc/tintuc_small_2.png", alt="alt")
+										figcaption
+											h3 Bảo tàng Hà Nội “rỗng ruột” sau 7 năm khánh thành
+											p Được đầu tư 1.600 tỷ đồng nhưng đến nay bảo tàng Hà Nội  chưa hoàn thành khâu trưng bày
+											time 08/06/2018
+			.row.other-list
+				- for(var x = 0; x < 6; x++)
+					.col-lg-4.col-md-6
+						a.item(href="#")
+							figure
+								.img
+									img.img-fluid(src="./img/02_tintuc/tintuc_small_2.png", alt="alt")
+								figcaption
+									h3 Bảo tàng Hà Nội “rỗng ruột” sau 7 năm khánh thành
+									p Được đầu tư 1.600 tỷ đồng nhưng đến nay bảo tàng Hà Nội  chưa hoàn thành khâu trưng bày
+									time 08/06/2018
+			.row
+				.col
+					include ../../pagination/p-1/index.pug

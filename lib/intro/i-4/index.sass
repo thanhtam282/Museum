@@ -3,4 +3,123 @@
 // CODE
 //////////////////////////////////////
 
-.canhcam-intro-1
+.canhcam-intro-4
+	background: color-get($mau, bg-1)
+	+pad(3rem null)
+	article
+		max-width: 1500px
+		+mar(null auto)
+		.head-title
+			position: relative
+			+pad(r(25px) null)
+			+fz(r(30px))
+			font-family: 'Open Sans'
+			text-align: center
+			+media-breakpoint-down(md)
+				+fz(1.5rem)
+			span
+				font-weight: bold
+			&:after
+				display: block
+				position: absolute
+				content: ""
+				width: 3rem
+				height: 1px
+				left: 50%
+				transform: translateX(-50%)
+				top: 0
+				background: color-get($mau, den)
+	
+		.list-items
+			.slick-dots
+				bottom: r(-40px)
+				li
+					button
+						+fz(.9rem)
+						background: transparent
+						border-radius: 50%
+						+wh(1rem)
+						border: 2px solid color-get($mau,main)
+						&:before
+							content: ""
+
+				li.slick-active
+					button
+						background: color-get($mau, main)
+	.name
+		+fz(r(20px))
+		color: #5e5e5e
+		text-align: center
+		+pad(1.5rem r(170px) )
+		+media-breakpoint-down(md)
+			+fz(1.2rem)
+			+pad(1.5rem r(100px) )
+		+media-breakpoint-down(sm)
+			+pad(1.5rem )
+	.tab
+		ul
+			transition: .5s all ease-in-out
+			+pad(1rem 0 r(35px) 0)
+			justify-content: center
+			border: 0
+			li
+				// +pad(    r(11px) r(50px))
+				+mar(0 .5rem 0 0 )
+				a
+					border-radius: r(20px)
+					border: 1px solid #5e5e5e
+					+pad(    r(11px) r(50px) r(7px) r(50px) )
+					display: block
+					+wh(100%)
+					+fz(r(14px))
+					color: #070707
+					text-transform: uppercase
+					&:hover
+						border: 1px solid #5e5e5e
+				a.active
+					border: 1px solid #e21836
+					height: 100% !important
+					background: transparent !important
+					color: #e21836
+					font-weight: 600
+					&:hover
+						border: 1px solid #e21836
+				+media-breakpoint-down(sm)
+					width: 95%
+					margin-top: .25rem
+					text-align: center
+				+media-breakpoint-down(xs)
+					a
+						+pad(null 0)
+
+
+		.architec-tab, .style-tab
+			-webkit-column-count: 3
+			-moz-column-count: 3
+			column-count: 3
+			-webkit-column-gap: r(50px)
+			-moz-column-gap: r(50px)
+			column-gap: r(50px)
+			+media-breakpoint-down(md)
+				-webkit-column-count: 2
+				-moz-column-count: 2
+				column-count: 2
+				-webkit-column-gap: r(30px)
+				-moz-column-gap: r(30px)
+				column-gap: r(30px)
+			+media-breakpoint-down(sm)
+				-webkit-column-count: 1
+				-moz-column-count: 1
+				column-count: 1
+				-webkit-column-gap: r(30px)
+				-moz-column-gap: r(30px)
+				column-gap: r(30px)
+			figure
+				img
+					margin-bottom: 2rem
+				figcaption
+					p
+						text-align: justify
+						+fz(r(15px))
+						padding-bottom: 2rem
+			

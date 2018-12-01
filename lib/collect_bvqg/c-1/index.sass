@@ -1,0 +1,80 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-collect-bvqg-1, .canhcam-collect-ckmm-1
+	+pad(3rem 0)
+
+	.nav
+		width: 100%
+		.nav-item
+			width: 100%
+			+fz(r(18px))
+			transition: .3s all ease-in-out
+			.nav-link
+				display: block
+				+pad(r(16px) null )
+				width: 100%
+				background: color-get($mau, bg-xam)
+				color: #4b4a4a
+				transition: .3s all ease-in-out
+				margin-top: 1rem
+			&.active
+				.nav-link
+					color: #f3b7a1
+					+pad(r(16px) null )
+					background: color-get($mau, main-dark)
+			ul
+				transition: .3s all ease-in-out
+				width: 100%
+				li
+					transition: .3s all ease-in-out
+					overflow: hidden
+					a
+						transition: .3s all ease-in-out
+						text-decoration: none
+						font-weight: 600
+						+fz(15px)
+						position: relative
+						display: block
+						width: 100%
+						+pad(r(20px) null r(7px) null )
+						background: transparent
+						color: #4b4a4a
+						margin-left: 2rem
+						&:after
+							left: 0
+							position: absolute
+							display: block
+							content: ""
+							width: 100%
+							height: 1px
+							background: color-get($mau, bg-xam)
+							bottom: 0
+						&.active
+							color: color-get($mau,main)
+	.news-title
+		text-align: left
+		color: color-get($mau,main)
+		+media-breakpoint-down(sm)
+			padding-top: 3rem
+		&:after
+			left: auto
+			transform: none
+
+	.top-title
+		+fz(r(30px))
+		padding-top: 1.2rem
+		text-align: center
+	.quote
+		line-height: r(26px)
+		text-align: justify
+		+pad( null null r(37px) null)
+		+fz(r(15px))
+	.item
+		img
+			border-radius: 4px
+			border: 1px solid  rgb(211, 211, 211)
+			margin-bottom: r(30px)
+				

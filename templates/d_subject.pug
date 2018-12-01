@@ -1,0 +1,15 @@
+extends _layout/layout.pug
+block variables
+	- var title = "d_subject"
+	- var description = "Description for d_subject page"
+	- var bodyclass = "d_subject"
+	- var href = "/d_subject.html"
+block header
+	include ../lib/header/h-9/index.pug
+block body
+	include ../lib/intro/i-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/d_subject/ds-1/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug
+	include ../lib/footer/f-6/index.pug

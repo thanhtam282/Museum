@@ -1,0 +1,74 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-show-detail-1
+	+pad(4rem null)
+	.title
+		color: color-get($mau,main-light)
+		background: color-get($mau, main-dark)
+		width: 100%
+		+pad(1rem null 1rem 1rem)
+	.link
+		padding-left: 1rem
+		transition: .3s all ease-in-out
+		a
+			text-decoration: none
+			p
+				font-weight: 600
+				+fz(r(15px))
+				margin-top: 1rem
+				border-bottom: 1px solid color-get($mau,bg-xam)
+				position: relative
+				&:after
+					content: "\e874"
+					position: absolute
+					font-family: "Linearicons-Free"
+					display: block
+					right: 0
+					top: 0
+		&.active
+			a
+				p
+					&:after
+						content: "\e873"
+
+		.sub-link
+			+fz(r(13px))
+			display: flex
+			flex-direction: column
+			margin-left: 1rem
+			a
+				text-decoration: none
+				+pad(.5rem null)
+				&.active
+					span
+						font-weight: bold
+	.news-title
+		text-align: left
+		color: color-get($mau,main)
+		+media-breakpoint-down(sm)
+			padding-top: 3rem
+		&:after
+			left: auto
+			transform: none
+
+	.top-title
+		+fz(r(30px))
+		padding-top: 1.2rem
+		text-align: center
+		+media-breakpoint-down(sm)
+			font-size: 1.5rem
+			padding-top: 2rem
+	.quote
+		line-height: r(26px)
+		text-align: justify
+		+pad( null null r(37px) null)
+		+fz(r(15px))
+	.item
+		img
+			border-radius: 4px
+			border: 1px solid  rgb(211, 211, 211)
+			margin-bottom: r(30px)
+				

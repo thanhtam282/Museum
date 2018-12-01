@@ -3,4 +3,51 @@
 // CODE
 //////////////////////////////////////
 
-.canhcam-intro-1
+.canhcam-intro-3
+	+pad(3rem null)
+	.head-title
+		+fz(r(30px))
+		font-family: 'Open Sans'
+		text-align: center
+		span
+			font-weight: bold
+	.mess
+		// padding-top: r(80px)
+		+media-breakpoint-down(md)
+			padding-top: 3rem
+		.head-title
+			+pad(r(25px) null)
+			&:after
+				display: block
+				position: absolute
+				content: ""
+				width: 3rem
+				height: 1px
+				left: 50%
+				transform: translateX(-50%)
+				top: 0
+				background: color-get($mau, den)
+	.quote
+		p
+			+fz(15px)
+			+pad(0 0 r(20px) 0)
+			span
+				text-transform: uppercase
+				font-weight: 600
+			&:first-child
+				padding-top: 0
+			&:last-child
+				+pad(1rem  0 0  1rem )
+				border-left: 2px solid color-get($mau,main)
+		figure
+			height: 100%
+			+media-breakpoint-down(md)
+				background-image: none
+				margin: 0
+				margin-top: 1rem
+
+	.quote2
+		padding-top: 1rem
+		p
+			+fz(15px)
+			+pad(r(20px) 0 0 0)

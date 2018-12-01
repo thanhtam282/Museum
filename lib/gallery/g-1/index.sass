@@ -1,0 +1,45 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-gallery-1
+	+pad(4rem null)
+	.news-title
+		color: color-get($mau,main)
+	.list
+		padding-top: 2rem
+		a
+			text-decoration: none
+			figure
+				position: relative
+				overflow: hidden
+				figcaption
+					position: relative
+					// +pos(abs, null null null null)
+					color: color-get($mau,trang)
+					background: color-get($mau, main)
+					width: 100%
+					height: r(75px)
+					+flex-center()
+					h3
+						+fz(19px)
+				&:before
+					transition: .5s all ease-in-out
+					content: "\e81b"
+					font-family: 'Linearicons-Free'
+					background: color-get($mau,main)
+					opacity: .5
+					height: calc( 100% - 75px)
+					width: 100%
+					position: absolute
+					top: -100%
+					+flex-center()
+					+fz(3rem)
+					color: color-get($mau,trang)
+			+media-breakpoint-up(md)
+				&:hover
+					figure
+						&:before
+							top: 0
+						figcaption
