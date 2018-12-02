@@ -1,0 +1,85 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-tour-3
+	+pad(null null 4rem null)
+	.wrapper_block
+		.wrapper-contact
+			border-radius: r(10px)
+			background: #f3eddf
+			display: flex
+			+media-breakpoint-down(lg)
+				flex-direction: column
+			+media-breakpoint-down(md)
+				flex-direction: row
+				margin-bottom: 1rem
+
+			.icon
+				flex: 0 0 30%
+				border-bottom-left-radius: r(10px)
+				border-top-left-radius: r(10px)
+				transition: .3s all ease-in-out
+				+flex-center()
+				+media-breakpoint-down(lg)
+					border-radius: 0
+					border-top-left-radius: r(10px)
+					border-top-right-radius: r(10px)
+					flex: 0 0 50%
+				+media-breakpoint-down(md)
+					border-radius: 0
+					border-bottom-left-radius: r(10px)
+					border-top-left-radius: r(10px)
+					flex: 0 0 30%
+				a
+					i
+						+fz(4rem)
+						+media-breakpoint-down(sm)
+							font-size: 3rem
+			.info
+				+pad(r(20px) 1rem r(34px) null)
+				+flex-center()
+				flex-direction: column
+				align-items: flex-start
+				text-transform: uppercase
+				+media-breakpoint-down(lg)
+					+pad(r(20px) 1rem r(20px) null)
+					align-items: center
+				+media-breakpoint-down(md)
+					align-items: flex-start
+				h4 
+					+fz(r(20px))
+					color: #0e0e0e
+				p
+					color: #4e4e4e
+					font-weight: 400
+					+fz(r(18px))
+					+media-breakpoint-down(sm)
+						font-size: 1rem
+		&:nth-child(2), &:nth-child(3)
+			.wrapper-contact
+				.icon
+					// border-bottom-left-radius: r(10px)
+					// border-top-left-radius: r(10px)
+					background: color-get($mau, main)
+					+media-breakpoint-down(md)
+						background: none
+					a
+						i
+							font-size: 5rem
+							color: color-get($mau,trang)
+							+media-breakpoint-down(sm)
+								font-size: 3rem
+								// color: color-get($mau,main)
+				.info
+					+pad(null 1rem)
+					p
+						padding-left: 1rem
+						font-weight: 400
+						text-transform: none
+						+media-breakpoint-down(lg)
+							text-align: center
+						+media-breakpoint-down(md)
+							br
+								display: none

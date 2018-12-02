@@ -1,0 +1,15 @@
+extends _layout/layout.pug
+block variables
+	- var title = "map"
+	- var description = "Description for map page"
+	- var bodyclass = "map"
+	- var href = "/map.html"
+block header
+	include ../lib/header/h-9/index.pug
+block body
+	include ../lib/intro/i-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/map/m-1/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug
+	include ../lib/footer/f-6/index.pug

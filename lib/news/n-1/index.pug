@@ -7,7 +7,7 @@ section.canhcam-news-4(bg-img='./img/_global/bg_1.png')
 			.row
 				.col-lg-6.top-list
 					a.item(href="#")
-						figure
+						figure(data-aos="fade-up"  data-aos-duration="2000")
 							.img
 								img.w-100(src="./img/02_tintuc/tintuc_big.png", alt="alt")
 							figcaption
@@ -19,7 +19,7 @@ section.canhcam-news-4(bg-img='./img/_global/bg_1.png')
 				.col-lg-6.part-list
 					.row
 						- for(var x = 0; x < 3; x++)
-							.col-12
+							.col-12(data-aos="fade-up"  data-aos-duration="2000")
 								a.item(href="#")
 									figure
 										.img
@@ -30,7 +30,7 @@ section.canhcam-news-4(bg-img='./img/_global/bg_1.png')
 											time 08/06/2018
 			.row.other-list
 				- for(var x = 0; x < 6; x++)
-					.col-lg-4.col-md-6
+					.col-lg-4.col-md-6(data-aos="fade-up"  data-aos-duration="2000")
 						a.item(href="#")
 							figure
 								.img

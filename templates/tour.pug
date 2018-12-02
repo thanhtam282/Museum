@@ -1,0 +1,18 @@
+extends _layout/layout.pug
+block variables
+	- var title = "tour"
+	- var description = "Description for tour page"
+	- var bodyclass = "tour"
+	- var href = "/tour.html"
+block header
+	include ../lib/header/h-9/index.pug
+block body
+	include ../lib/intro/i-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	.block-section(bg-img='./img/_global/bg_1.png')
+		include ../lib/tour/t-1/index.pug
+		include ../lib/tour/t-2/index.pug
+		include ../lib/tour/t-3/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug
+	include ../lib/footer/f-6/index.pug

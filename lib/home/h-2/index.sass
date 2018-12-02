@@ -50,7 +50,7 @@
 					border: 1px solid color-get($mau,trang)
 					+pad(1rem .5rem)
 					a
-
+						text-decoration: none
 						h3
 							+flex-center()
 							flex-direction: column
@@ -59,6 +59,7 @@
 							+fz(1rem)
 							text-transform: uppercase
 							i
+								transition: .3s all ease-in-out
 								color: color-get($mau,trang)
 								display: block
 								border-radius: 50%
@@ -70,7 +71,13 @@
 									+fz(1rem)
 								&:before
 									line-height: r(42px)
-						text-decoration: none
+						+media-breakpoint-up(md)
+							&:hover
+								h3
+									i
+										background: color-get($mau, trang)
+										box-shadow: 0px 0px 0px 1px color-get($mau,main) inset
+										color: color-get($mau,main)
 	.news
 		.title
 			display: flex
@@ -224,64 +231,4 @@
 					&:hover
 						background: color-get($mau, main)
 						color: color-get($mau,trang)
-	&:after
-		position: absolute
-		top: -3rem
-		content: ""
-		display: block
-		+wh(100%)
-		background-image: url('../img/home/home_bg.png')
-		background-repeat: no-repeat
-		background-size: cover
-		background-position: center center
-		pointer-events: none
-		z-index: -1
-		
-	.gallery
-		.title
-			padding-top: 3rem
-			font-size: r(22px)
-			color: color-get($mau,text-6)
-			font-weight: 600
-			display: flex
-			justify-content: space-between
-			padding-bottom: 1rem
-			i
-				text-align: right
-				+fz(r(18px))
-				color: color-get($mau,text-6)
-	.link-item
-
-		.item
-			margin: 0
-			+media-breakpoint-down(md)
-				margin-bottom: 2rem
-			.img
-				box-shadow: 0px 3px 8px 0px  color-rgba(color-get($mau,den),.2) 
-				overflow: hidden
-				img
-					transition: .5s all ease-in-out
-			figcaption
-				h4
-					+pad(r(17px) null r(20px) null)
-					margin: 0
-					color: color-get($mau,main)
-					+fz(r(20px))
-					text-transform: uppercase
-				p
-					color: color-get($mau,text-6)
-					text-align: left
-					overflow: hidden
-					text-overflow: ellipsis
-					display: -webkit-box
-					-webkit-line-clamp: 4
-					-webkit-box-orient: vertical
-		&:hover
-			text-decoration: none
-			+media-breakpoint-up(lg)
-				.item
-					.img
-						
-						img
-							transform: scale(1.1)
 

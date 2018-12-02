@@ -1,0 +1,74 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-tour-2
+	+pad(null null 4rem null)
+	.head-title
+		+media-breakpoint-down(sm)
+			font-size: 1.5rem
+	.detail
+		// padding-right: r(75px)
+		// +media-breakpoint-down(md)
+		// 	padding-right: r(25px)
+		// +media-breakpoint-down(sm)
+		// 	padding-right: 0
+		h4
+			padding-bottom: r(15px)
+			margin: 0
+			font-weight: 600
+			+fz(r(18px))
+			color: #b52b1d
+		ul
+			padding-left: 2rem
+			color: #4b4b4b
+			line-height: r(26px)
+			+fz(r(16px))
+			li
+				position: relative
+				&:after
+					top: -.5rem
+					content: "."
+					position: absolute
+					left: -1.5rem
+					font-size: 3rem
+					color: color-get($mau,text-9)
+	figure
+		height: 100%
+		+media-breakpoint-down(md)
+			background-image: none !important
+	.detail_2
+		padding-top: r(20px)
+		p
+			position: relative
+			padding-left: 2rem
+			+fz(r(16px))
+			color: #4b4b4b
+			span
+				font-weight: 600
+				color: #b52b1d
+		p:first-child
+			padding-bottom: .5rem
+			&:after
+				content: "."
+				top: -2rem
+				position: absolute
+				font-size: 3rem
+				left: 0.5rem
+				color: #999999
+
+		ul
+			line-height: r(26px)
+			+fz(r(16px))
+			padding-left: 4rem
+			+media-breakpoint-down(sm)
+				padding-left: 2rem
+			li
+				position: relative
+				&:after
+					content: "-"
+					position: absolute
+					left: -1rem
+					color: color-get($mau,text-9)
+					top: 0

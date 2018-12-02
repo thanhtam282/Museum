@@ -5,7 +5,7 @@ section.canhcam-home-2
 				.row
 					.col
 						h3.text-left.title Thông tin
-				.row.detail
+				.row.detail(style="overflow-x: hidden" data-aos="fade-up-right" data-aos-duration="2000")
 					.col
 						.row.time
 							.col-4
@@ -51,7 +51,7 @@ section.canhcam-home-2
 						h3.text-left.title Tin tức
 							a(href="#")
 								i.fas.fa-plus-square
-				.row
+				.row(data-aos="fade-up" data-aos-duration="2000")
 					.col
 						figure.hot-news
 							.img
@@ -59,7 +59,7 @@ section.canhcam-home-2
 							figcaption
 								a(href="#")
 									h5 Tiếp nhận bộ sưu tập hiện vật quý từ CHLB Đức dành cho Bảo Tàng Lịch Sử Việt Nam.
-				.row
+				.row(data-aos="fade-up" data-aos-duration="2000")
 					.col-12
 						.sub-news
 							a(href="#")
@@ -79,7 +79,7 @@ section.canhcam-home-2
 							i.play.fas.fa-play
 							i.pause.fas.fa-pause
 				.row
-					.col
+					.col(style="overflow-x: hidden" data-aos="fade-up-left" data-aos-duration="2000")
 						.list-items
 							a(href="#")
 								.item
@@ -93,7 +93,7 @@ section.canhcam-home-2
 							a(href="#")
 								.item
 									img.w-100(src='./img/home/home_sukien_thumbnail.png', alt='')
-				.row
+				.row(data-aos="fade-up-left" data-aos-duration="2000" style="overflow-x: hidden")
 					.col
 						.social
 							a(href="#")
@@ -104,7 +104,7 @@ section.canhcam-home-2
 								i.fab.fa-facebook-f
 							a(href="#")
 								i.fab.fa-instagram
-				.row
+				.row(data-aos="fade-up-left" data-aos-duration="2000" style="overflow-x: hidden")
 					.col
 						.dropdown.show
 							a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle( role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
@@ -123,21 +123,3 @@ section.canhcam-home-2
 								a.dropdown-item(href='#') Something else here
 								a.dropdown-item(href='#') Something else here
 								a.dropdown-item(href='#') Something else here
-		.row
-			.col.gallery
-				h3.text-left.title Bộ sưu tập
-					a(href="#")
-						i.fas.fa-plus-square
-		.row.pb-5
-			- for(var x = 0; x < 3; x ++)
-				.col-lg-4
-					a.link-item(href="#")
-						figure.item
-							.img
-
-								img.w-100(src='./img/home/home_bosuutap_3.png', alt='')
-							figcaption
-
-								h4 CỔ KHÍ minh mạng
-								p Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm 1500
-

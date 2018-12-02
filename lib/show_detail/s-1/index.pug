@@ -1,7 +1,7 @@
 section.canhcam-show-detail-1(bg-img='./img/_global/bg_1.png')
 	.container
 		.row
-			.col-md-3
+			.col-md-3(data-aos="fade-up"  data-aos-duration="2000")
 				h5.title Trưng bày thường xuyên
 				.link
 					a(href="javascript:void(0)") 
@@ -32,7 +32,7 @@ section.canhcam-show-detail-1(bg-img='./img/_global/bg_1.png')
 				.link
 					a(href="javascript:void(0)") 
 						p Đền Hùng
-			.col-md-9
+			.col-md-9(data-aos="fade-up"  data-aos-duration="2000")
 				.row
 					.col
 						h2.news-title BẢO VẬT QUỐC GIA
@@ -44,7 +44,9 @@ section.canhcam-show-detail-1(bg-img='./img/_global/bg_1.png')
 							p Đất nước Việt Nam như ngày nay được hình thành từ rất lâu trước khi con người xuất hiện, tuổi địa chất từ thời tiền Cambri cho đến Mesozoi (Trung sinh) muộn khoảng 570 - 65 triệu năm về trước. Những biến đổi khí hậu và môi trường trong những thời kỳ dài, đặc biệt ở kỷ thứ 3 và đầu kỷ thứ 4 (Kỷ Nhân sinh) cách ngày nay 1,6 - 0,7 triệu năm, đã là điều kiện thuận lợi cho con người có thể sinh sống được. 
 							p Những phát hiện khảo cổ học về răng người cổ ở các hang Thẩm Khuyên, Thẩm Hai (Lạng Sơn), hang Hùm (Yên Bái), những công cụ thô sơ bằng đá có vết chế tác của người nguyên thủy ở núi Đọ, núi Nuông (Thanh Hóa), núi Đất (Đồng Nai)… chứng tỏ cách nay khoảng 500.000 năm, vào thời đại đá cũ, con người đã sinh sống nhiều nơi trên đất nước Việt Nam. Và bước sang thời đại đá mới, cách nay khoảng 10.000 năm, các công cụ đá mài, những mảnh gốm thô tìm được từ các nền văn hóa Hòa Bình, Bắc Sơn, Quỳnh Văn… đã cho thấy cư dân cổ Việt Nam đang từ cuộc sống thu lượm chuyển dần sang sản xuất nông nghiệp.
 
-				.row.item
+				.row.item(data-aos="fade-up"  data-aos-duration="2000")
 					- for ( var x = 0; x < 7; x ++)
 						.col-lg-4.col-md-6
-							img.w-100(src='./img/05_trungbay/05_trungbay_ct/05_trungbay_ct_6.png', alt='')
+							a.image(href="./img/05_trungbay/05_trungbay_ct/05_trungbay_ct_6.png")
+								figure
+									img.w-100(src='./img/05_trungbay/05_trungbay_ct/05_trungbay_ct_6.png', alt='')

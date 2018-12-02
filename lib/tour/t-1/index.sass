@@ -1,0 +1,36 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-tour-1
+	+pad(3rem null)
+	.info_wrapper
+		+pad(r(30px) r(45px) r(50px) r(45px))
+		background: #f3eddf
+		border-radius: r(10px)
+		+media-breakpoint-down(md)
+			+pad(1rem)
+			+flex-center()
+			flex-direction: column
+			margin-top: 1rem
+		h3
+
+			+pad(1rem null)
+			+fz(r(20px))
+			margin: 0
+			text-transform: uppercase
+			+flex-center()
+			flex-direction: column
+			
+			i
+				padding-bottom: r(30px)
+				display: block
+				color: color-get($mau,main)
+				font-size: 3.5rem
+		p
+			font-weight: 400
+			text-align: center
+			+fz(18px)
+			span
+				font-weight: 600

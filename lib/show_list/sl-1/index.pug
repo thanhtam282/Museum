@@ -1,0 +1,45 @@
+section.canhcam-show-list-1(bg-img='./img/_global/bg_1.png')
+	.container
+		.row
+			.col
+				h2.news-title Triển lãm
+		//- .row
+		//- 	.col
+		//- 		ul.nav
+		//- 			li.nav-item.active
+		//- 				a(href="#") Trưng bày ngắn hạn
+		//- 			li.nav-item
+		//- 				a(href="#") Trưng bày thường xuyên
+		.row
+			.col
+				ul#myTab.nav.nav-tabs(role="tablist" data-aos="fade-up"  data-aos-duration="2000" )
+					li.nav-item
+						a#long-tab.nav-link.active(data-toggle="tab" href="#long" role="tab" aria-controls="long" aria-selected="true") Trưng bày ngắn hạn
+					li.nav-item
+						a#short-tab.nav-link(data-toggle="tab" href="#short" role="tab" aria-controls="short" aria-selected="false") Trưng bày thường xuyên
+
+
+
+				#myTabContent.tab-content
+					#long.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="long-tab")
+						.long-tab
+							.row
+								- for( var x = 0; x < 4; x ++)
+									.col-md-6.col-lg-3(data-aos="zoom-in"  data-aos-duration="2000")
+										a(href="#")
+											figure.mb-5.mb-lg-0
+												.img
+													img.w-100(src='./img/05_trungbay/trungbay_ds_4.png', alt='')
+												figcaption
+													h3 Trưng bày ngoài trời
+					#short.tab-pane.fade(role="tabpanel" aria-labelledby="short-tab")
+						.short-tab
+							.row
+								- for( var x = 0; x < 4; x ++)
+									.col-md-6.col-lg-3
+										a(href="#")
+											figure.mb-5.mb-lg-0
+												.img
+													img.w-100(src='./img/05_trungbay/trungbay_ds_4.png', alt='')
+												figcaption
+													h3 Trưng bày ngoài trời

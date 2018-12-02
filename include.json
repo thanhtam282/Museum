@@ -9,8 +9,10 @@
 				"news-details/n-1",
 				"home/h-1",
 				"home/h-2",
+				"home/h-3",
 				"pagination/p-1",
 				"sub-news/sn-1",
+				"nav/n-1",
 				"social/s-1",
 				"breadcrumb/b-1"
 			],
@@ -51,8 +53,7 @@
 		},
 		"gallery_detail": {
 			"body": [
-				"gallery_detail/gd-1",
-				"gallery_detail/gd-2"
+				"gallery_detail/gd-1"
 			]
 		},
 		"collect_bvqg": {
@@ -63,6 +64,39 @@
 		"show-detail": {
 			"body": [
 				"show_detail/s-1"
+			]
+		},
+		"show-list": {
+			"body": [
+				"show_list/sl-1"
+			]
+		},
+		"map": {
+			"body": [
+				"map/m-1"
+			]
+		},
+		"service": {
+			"body": [
+				"service/s-1"
+			]
+		},
+		"vision": {
+			"body": [
+				"vision/v-1"
+			]
+		},
+		"tour": {
+			"body": [
+				"tour/t-1",
+				"tour/t-2",
+				"tour/t-3"
+			]
+		},
+		"contact": {
+			"body": [
+				"contact/c-1",
+				"contact/c-2"
 			]
 		}
 	}

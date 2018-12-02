@@ -1,0 +1,74 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-show-list-1
+	+pad(3rem null)
+	.news-title
+		color: color-get($mau,main)
+	.nav
+		padding-bottom: r(40px)
+		padding-top: r(21px)
+		border: 0
+		border-radius: 0
+		+flex-center
+		.nav-item
+			margin: 0
+			text-align: center
+			+media-breakpoint-down(sm)
+				flex: 0	0 80%
+				+ .nav-item
+					margin-top: 3px
+			.nav-link
+				border: 0
+				border-radius: 0
+				text-decoration: none
+				+fz(r(20px))
+				color: color-get($mau,text-3)
+				+pad(.5rem r(60px) )
+				display: block
+				background: color-get($mau, bg-xam)
+				+media-breakpoint-down(sm)
+					padding: 1rem
+			.nav-link.active
+				background: color-get($mau, main)
+				color: color-get($mau,trang)
+
+	.short-tab, .long-tab
+		padding-top: 2rem
+		a
+			text-decoration: none
+			figure
+				position: relative
+				overflow: hidden
+				figcaption
+					position: relative
+					// +pos(abs, null null null null)
+					color: color-get($mau,trang)
+					background: color-get($mau, main)
+					width: 100%
+					height: r(40px)
+					+flex-center()
+					h3
+						+fz(18px)
+						margin: 0
+				&:before
+					transition: .5s all ease-in-out
+					content: "\e81b"
+					font-family: 'Linearicons-Free'
+					background: color-get($mau,main)
+					opacity: .5
+					height: calc( 100% - 40px)
+					width: 100%
+					position: absolute
+					top: -100%
+					+flex-center()
+					+fz(3rem)
+					color: color-get($mau,trang)
+			+media-breakpoint-up(md)
+				&:hover
+					figure
+						&:before
+							top: 0
+						figcaption

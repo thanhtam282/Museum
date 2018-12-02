@@ -1,0 +1,62 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-contact-1
+	+pad(3rem null)
+	.wrapper-title
+		.news-title
+			color: color-get($mau,main)
+			position: relative
+		p
+			padding-top: 1rem
+			+fz(r(16px))
+			+media-breakpoint-down(sm)
+				br
+					display: none
+	.fill_info
+		padding-top: r(40px)
+		.form-group
+			width: 100%
+			margin-bottom: r(20px)
+			+ .form-group
+				margin-left: r(20px)
+			input, textarea
+				color: color-get($mau,text-6)
+				background: #ebebeb
+				+pad(1rem null)
+				border: 0
+				+fz(r(13px))
+		.info
+			border-radius: r(10px)
+			background: #ebebeb
+			+pad(2rem 1rem 2rem 1.5rem)
+			height: 100%
+			+media-breakpoint-down(md)
+				+pad(2rem)
+				margin-bottom: 2rem
+				height: auto
+			h4
+				font-size: r(25px)
+				color: color-get($mau,main)
+				padding-bottom: r(30px)
+			p
+				font-weight: 600
+				color: color-get($mau,text-6)
+				+fz(r(16px))
+				span
+					color: color-get($mau,text-9)
+					font-weight: normal
+		.send
+			align-items: center
+			justify-content: flex-end
+			.btn-send
+				background: color-get($mau, main)
+				color: color-get($mau,trang)
+				width: r(150px)
+				height: r(47px)
+				+flex-center()
+			.form-group
+				margin: 0
+				margin-right: r(30px)

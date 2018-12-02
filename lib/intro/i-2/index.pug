@@ -1,7 +1,7 @@
 section.canhcam-intro-2(bg-img='./img/_global/bg_1.png')
 	.container
 		.row
-			.col.wrapper
+			.col.wrapper(data-aos="fade-up"  data-aos-duration="1500")
 				ul.list-inline.list-unstyled
 					li.active.list-inline-item
 						a(href="#intro-1").li-link Lịch sử bảo tàng  
@@ -19,9 +19,9 @@ section.canhcam-intro-2(bg-img='./img/_global/bg_1.png')
 							h3.head-title Lịch sử 
 								span Bảo Tàng
 
-					.row
+					.row(style="overflow-x: hidden"  )
 						.col
-							ul#myTab.nav.nav-tabs(role="tablist")
+							ul#myTab.nav.nav-tabs(role="tablist" data-aos="fade-up"  data-aos-duration="2000")
 								li.nav-item
 									a#y1929-tab.nav-link.active(data-toggle="tab" href="#y1929" role="tab" aria-controls="y1929" aria-selected="true") 1929
 								li.nav-item
@@ -34,14 +34,14 @@ section.canhcam-intro-2(bg-img='./img/_global/bg_1.png')
 							#myTabContent.tab-content
 								#y1929.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="y1929-tab")
 									.y1929-tab
-										.row
-											.col-lg-7
+										.row(style="overflow-x: hidden")
+											.col-lg-7(data-aos="fade-right"  data-aos-duration="2000")
 												.detail
 													h3.tab-title Năm 1929
 													p Bảo tàng Lịch sử Thành phố Hồ Chí Minh là một bảo tàng lớn và có lịch sử phát triển lâu đời ở khu vực phía Nam Việt Nam. Tọa lạc tại trung tâm thành phố, Bảo tàng là điểm đến thu hút đông đảo công chúng trong nước và quốc tế. 
 													p Bảo tàng Lịch sử Thành phố Hồ Chí Minh trước đây là Bảo tàng Blanchard de la Brosse (tên của viên thống đốc Nam Kỳ) thành lập và là bảo tàng đầu tiên ở phía Nam Việt Nam. 
  
-											.col
+											.col(data-aos="fade-left"  data-aos-duration="2000")
 												figure
 													.img
 														img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
