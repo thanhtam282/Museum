@@ -1,9 +1,6 @@
 header.canhcam-header-12
 	.k-menu-bar.container
 		#logo.mr-auto
-		#language
-			a(href='#')
-				img(src="./img/_global/us_lang.png", alt="")
 		button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
 			i.mdi.mdi-menu
 	#demoResAllInOneMenu.container.k-responsive-menu
@@ -16,10 +13,10 @@ header.canhcam-header-12
 			img(src="./img/_global/logo.png", alt="")
 		.nav.mainnav.ml-auto
 			.wrapper-top
+				.hotline
+					a.nav-top-link(href='#') Hotline:   
+						span 0283 8258 783
 				ul.nav-top.nav
-					li.nav-top-item
-						a.nav-top-link(href='#') Hotline:  
-							span 0283 8258 783
 					li.nav-top-item
 						a.nav-top-link(href='#') Hỗ trợ khách hàng 
 					li.nav-top-item
@@ -29,6 +26,9 @@ header.canhcam-header-12
 				.language
 					a(href='#')
 						img(src="./img/_global/us_lang.png", alt="")
+					a(href='#')
+						img(src="./img/_global/vn_lang.png", alt="")
+					
 
 			.wrapper
 				ul.nav
@@ -37,7 +37,7 @@ header.canhcam-header-12
 							i.material-icons home
 							span Trang Chủ
 
-					li.nav-item
+					li.nav-item.active
 						a.nav-link(href='#')  giới thiệu
 					li.nav-item
 						a.nav-link(href='#')  bộ sưu tập 
@@ -50,15 +50,13 @@ header.canhcam-header-12
 					
 				a.search 
 					i.material-icons search
-				.input-group.ff
-					input.form-control(type='text', placeholder="Search", aria-label="Search", aria-describedby='basic-addon2')
-					.input-group-append
-						button.btn.btn-primary(type='submit')
-							i.fa.fa-search
-			#contactinfotel
-			#contactinfo
+				.searchbox
+					input.searchinput(type='text' placeholder='Search')
+					button.searchbutton(type='submit')
+						i.fa.fa-search
+
 		.register
 			a(href="#")
-				p Đăng ký thuyết minh
+				span Đăng ký thuyết minh
 				
 

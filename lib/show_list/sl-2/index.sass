@@ -1,0 +1,37 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-show-list-2
+	+pad(0 null 3rem null)
+	.news-title
+		color: color-get($mau,main)
+
+	.short-tab, .long-tab
+		padding-top: 2rem
+		a
+			text-decoration: none
+			figure
+				position: relative
+				.img
+					overflow: hidden
+					img
+						transition: .5s all ease-in-out
+				figcaption
+					position: relative
+					// +pos(abs, null null null null)
+					color: color-get($mau,trang)
+					background: color-get($mau, main)
+					width: 100%
+					height: r(40px)
+					+flex-center()
+					h3
+						+fz(18px)
+						margin: 0
+
+			+media-breakpoint-up(md)
+				&:hover
+					figure
+						img
+							transform: scale(1.1)

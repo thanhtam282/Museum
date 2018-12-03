@@ -17,12 +17,12 @@
 	.searchbar
 		+pad(1rem)
 		color: lighten(color-get($mau,main),30%)
-		.input-group
+		.searchbox
 			width: 100%
 			input, button
 				+bor-rad(0)
 			input
-				border: 1px solid color-get($mau,trang)
+				border: 1px solid color-get($mau,main)
 			button
 				background: darken(color-get($mau,trang),0%)
 				color: color-get($mau,main)
@@ -48,7 +48,7 @@
 		button
 			color: color-get($mau,den)
 		.nav
-			.nav-item, .nav-top-item
+			.nav-item, .nav-top-item, .hotline
 				.nav-link, .nav-top-link
 					display: flex
 					text-transform: capitalize
@@ -67,26 +67,73 @@
 					span
 						padding: 0
 			.language
-				display: none
+				+media-breakpoint-down(md)
+					position: absolute
+					top: 1rem
+					right: 4rem
 		.wrapper
 			.search
 				display: none
-			.ff
+			.searchbox
+				@media (max-width:992px)
+					display: flex
+					+pad(0 1rem)
 				input
+					border: 1px solid color-get($mau,main)
+					border-radius: 0.25rem 0 0 0.25rem
+					
 					padding: .5rem 1rem
+					&:hover, &:active, &:focus
+						outline: none
+					@media (max-width:992px)
+						width: 100%
+
 				button
+					@media (max-width:992px)
+						display: flex
+					border: 1px solid color-get($mau,main)
+					background: color-get($mau, main)
+					border-radius:  0 0.25rem 0.25rem 0
 					i
 						color: lighten(color-get($mau,main),30%)
 		.k-menu-bar
 			.k-button-toggle
 				color: color-get($mau,main)
 		.register
+			@media (max-width:992px)
+				padding: 1rem 0
+				a
+					span
+						border-radius: 4px
+						+transition(.3s all ease-in-out)
+						+flex-center()
+						flex-direction: column-reverse
+						background: color-get($mau, main-dark)
+						margin: 0 auto
+						position: relative
+						height: 100%
+						font-size: 1rem
+						text-transform: uppercase
+						text-align: center
+						width: 200px
+						+pad(null r(12px) r(12px))
+						color: color-get($mau,main-light)
+						&:after
+							+transition(0s all ease-in-out)
+							display: block
+							top: .5rem
+							content: "\e85e"
+							font-family: "Linearicons-Free"
+							color: color-get($mau,main-light)
+							font-size: 2rem
+						&:hover
+							color: color-get($mau, main-light)
 			a
-				p
-					color: lighten(color-get($mau,main),30%)
+				span
+					color: color-get($mau,main-light)
 					padding: 0.5rem 1rem
 					&:hover
-						color: color-get($mau,main-dark)
+						color: color-get($mau,main-light)
 						text-decoration: none
 				&:hover
 					text-decoration: none
@@ -118,10 +165,26 @@
 				align-items: center
 
 				justify-content: flex-end
+			.hotline
+				transition: .5s all ease-in-out
+				+pad(1rem null 5px null)
+				.nav-top-link
+					transition: .5s all ease-in-out
+					padding: 0
+					+fz(r(13px))
+					color: color-get($mau,text-9)
+					+flex-center()
+					span
+						+fz(r(18px))
+						font-weight: bold
+						color: color-get($mau,main)
+					&:hover
+						text-decoration: none
+						color: color-get($mau,main)
 			.nav
 				justify-content: flex-end
 				align-items: center
-				width: 100%
+				// width: 100%
 				position: relative
 				&.nav-top
 					+transition(.3s all ease-in-out)
@@ -166,6 +229,9 @@
 				.nav-item
 					+ .nav-item
 						margin-left: 1rem
+					&.active
+						.nav-link
+							color: color-get($mau,main-dark)
 					.nav-link
 						color: color-get($mau,text-3)
 						text-transform: uppercase
@@ -191,7 +257,7 @@
 						+fz(1.5rem)
 						color: color-get($mau,main)
 					
-				.input-group
+				.searchbox
 					position: absolute
 					right: 0
 					width: 200px
@@ -216,7 +282,7 @@
 			.register
 				height: auto
 				a
-					p
+					span
 						+transition(.3s all ease-in-out)
 						display: flex
 						align-items: flex-end
@@ -255,7 +321,7 @@
 					overflow: hidden
 				.k-responsive-menu
 					.mainnav
-						.nav-top, .language
+						.nav-top, .language, .hotline
 							height: 0px
 							margin-top: 0
 							overflow: hidden
@@ -265,7 +331,7 @@
 						img
 							max-height: 2.5rem
 					.register
-						p
+						span
 							
 							
 							padding: 1rem .5rem
@@ -293,3 +359,12 @@
 					.navbar-brand 
 						img
 							max-height: 3.5rem
+
+	.Module-146
+		height: 100%
+		.ModuleContent	
+			height: 100%
+			a
+				span
+					@media (max-width:992px)
+						padding:  0.5rem 1rem

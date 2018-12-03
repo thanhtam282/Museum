@@ -25,21 +25,34 @@
 						&:hover
 							color: color-get($mau,main)
 							text-decoration: none
-		.input-group
+		.subscribefrm
+			height: r(36px)
+			display: flex
 			input
+				width: 100%
+				height: 100%
+				background: #f2f2f2
 				+bor-rad(0)
 				color: color-get($mau,text-6)
-			::-webkit-input-placeholder
-				color: color-get($mau,text-9)
-			.input-group-append
-				button
-					+bor-rad(0)
-					width: r(80px)
-					+media-breakpoint-up(lg)
-						&:hover
-							background: color-get($mau, trang)
-							box-shadow: 0px 0px 0px 1px color-get($mau,main) inset
-							color: color-get($mau,main)
+				border: 1px solid #ced4da
+				padding-left: 1rem
+				&:active, &:focus
+					outline: none
+				&::placeholder
+					color: color-get($mau,text-9)
+			button
+				transition: .3s all ease-in-out
+				border: 1px solid color-get($mau,main)
+				height: 100%
+				color: color-get($mau,trang)
+				+bor-rad(0)
+				width: r(80px)
+				background: color-get($mau, main)
+				+media-breakpoint-up(lg)
+					&:hover
+						background: color-get($mau, trang)
+						box-shadow: 0px 0px 0px 1px color-get($mau,main) inset
+						color: color-get($mau,main)
 	.info
 		background: color-get($mau, trang)
 		+pad(1rem null)

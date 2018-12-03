@@ -68,7 +68,8 @@
 		},
 		"show-list": {
 			"body": [
-				"show_list/sl-1"
+				"show_list/sl-1",
+				"show_list/sl-2"
 			]
 		},
 		"map": {
