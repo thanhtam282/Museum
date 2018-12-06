@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<section class="canhcam-show-list-1" bg-img="/Data/Sites/1/skins/default/img/_global/bg_1.png">
+		<section class="canhcam-show-list-1" >
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -30,9 +30,15 @@
 
 	<xsl:template match="Zone">
 
+
 		<li class="nav-item">
 			<a class="nav-link" data-toggle="tab" >
 				<xsl:if test="IsActive='true'">
+					<xsl:attribute name="class">
+						<xsl:text>nav-link active</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
+				<xsl:if test="position() = 1 " >
 					<xsl:attribute name="class">
 						<xsl:text>nav-link active</xsl:text>
 					</xsl:attribute>

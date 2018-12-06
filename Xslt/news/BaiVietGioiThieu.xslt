@@ -11,6 +11,7 @@
 	<xsl:template match="Zone">
 		<xsl:choose>
 			<xsl:when test="position() = 1">
+				<xsl:text disable-output-escaping="yes">&lt;div  bg-img=&quot;/Data/Sites/1/skins/default/img/_global/bg_1.png&quot;&gt;</xsl:text>
 				<section class="canhcam-intro-2" bg-img="./img/_global/bg_1.png">
 					<div class="container">
 						<div class="row">
@@ -52,13 +53,14 @@
 						<div class="row quote">
 							<xsl:apply-templates select="News" mode="Zone2Content1"></xsl:apply-templates>
 						</div>
-						<div class="row quote2" data-aos="fade-up" data-aos-duration="2000">
+						<div class="row quote2">
 							<div class="col">
 								<xsl:apply-templates select="News" mode="Zone2Content2"></xsl:apply-templates>
 							</div>
 						</div>
 					</div>
 				</section>
+				<xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
 			</xsl:when>
 			<xsl:when test="position() = 3">
 				<section class="canhcam-intro-4" id="intro-3">
@@ -175,10 +177,10 @@
 	</xsl:template>
 
 	<xsl:template match="News" mode="Zone2Content1">
-		<div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+		<div class="col-lg-6" >
 			<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 		</div>
-		<div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+		<div class="col-lg-6" >
 			<figure bg-img="./img/01_gioithieu/gioithieu_giamdoc.png">
 				<xsl:attribute name="bg-img">
 					<xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>
@@ -239,15 +241,22 @@
 	<xsl:template match="News" mode="Zone3Content2TabsNav">
 		<xsl:if test="position() = 2">
 			<li class="nav-item">
-				<a class="nav-link active" id="architec-tab" data-toggle="tab" href="#architec" role="tab" aria-controls="architec"
-				 aria-selected="true">
+				<a class="nav-link active" data-toggle="tab">
+					<xsl:attribute name="href">
+						<xsl:text>#architec-</xsl:text>
+						<xsl:value-of select="position() - 1"></xsl:value-of>
+					</xsl:attribute>
 					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 				</a>
 			</li>
 		</xsl:if>
 		<xsl:if test="position() &gt; 2">
 			<li class="nav-item">
-				<a class="nav-link" id="style-tab" data-toggle="tab" href="#style" role="tab" aria-controls="style" aria-selected="false">
+				<a class="nav-link" data-toggle="tab">
+					<xsl:attribute name="href">
+						<xsl:text>#architec-</xsl:text>
+						<xsl:value-of select="position() - 1"></xsl:value-of>
+					</xsl:attribute>
 					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 				</a>
 			</li>
@@ -256,59 +265,63 @@
 
 	<xsl:template match="News" mode="Zone3Content2TabsContent">
 		<xsl:if test="position() = 2">
-			<div class="tab-pane fade show active" id="architec" role="tabpanel" aria-labelledby="architec-tab">
-				<div class="architec-tab">
-					<div class="row">
-						<div class="col">
-							<figure>
-								<img>
-								<xsl:attribute name="class">
-									<xsl:text>w-100</xsl:text>
-								</xsl:attribute>
-								<xsl:attribute name="src">
-									<xsl:value-of select="ImageUrl"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="alt">
-									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="title">
-									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-								</xsl:attribute>
-								</img>
-								<figcaption>
-									<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
-								</figcaption>
-							</figure>
-						</div>
+			<div class="tab-pane fade show active">
+				<xsl:attribute name="id">
+					<xsl:text>architec-</xsl:text>
+					<xsl:value-of select="position() - 1"></xsl:value-of>
+				</xsl:attribute>
+				<div class="row">
+					<div class="col">
+						<figure>
+							<img>
+							<xsl:attribute name="class">
+								<xsl:text>w-100</xsl:text>
+							</xsl:attribute>
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+							</xsl:attribute>
+							</img>
+							<figcaption>
+								<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
+							</figcaption>
+						</figure>
 					</div>
 				</div>
 			</div>
 		</xsl:if>
 		<xsl:if test="position() &gt; 2">
-			<div class="tab-pane fade" id="style" role="tabpanel" aria-labelledby="style-tab">
-				<div class="style-tab">
-					<div class="row">
-						<div class="col">
-							<figure>
-								<img>
-								<xsl:attribute name="class">
-									<xsl:text>w-100</xsl:text>
-								</xsl:attribute>
-								<xsl:attribute name="src">
-									<xsl:value-of select="ImageUrl"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="alt">
-									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="title">
-									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-								</xsl:attribute>
-								</img>
-								<figcaption>
-									<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
-								</figcaption>
-							</figure>
-						</div>
+			<div class="tab-pane fade">
+				<xsl:attribute name="id">
+					<xsl:text>architec-</xsl:text>
+					<xsl:value-of select="position() - 1"></xsl:value-of>
+				</xsl:attribute>
+				<div class="row">
+					<div class="col">
+						<figure>
+							<img>
+							<xsl:attribute name="class">
+								<xsl:text>w-100</xsl:text>
+							</xsl:attribute>
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+							</xsl:attribute>
+							</img>
+							<figcaption>
+								<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
+							</figcaption>
+						</figure>
 					</div>
 				</div>
 			</div>

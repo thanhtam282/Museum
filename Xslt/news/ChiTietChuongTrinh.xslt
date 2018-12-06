@@ -17,8 +17,10 @@
 								<time>
 									<xsl:value-of select="/NewsDetail/CreatedDate"></xsl:value-of>
 								</time>
+								<p>
+								<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
+							</p>
 								<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
-
 								<div class="social-networks nav">
 									<div class="nav-item">
 										<div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true">

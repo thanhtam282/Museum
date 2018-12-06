@@ -5,7 +5,7 @@
 
 	<!--Begin News-->
 	<xsl:template match="/">
-		<section class="canhcam-vision-1 pt-0" bg-img="/Data/Sites/1/skins/default/img/_global/bg_1.png">
+		<section class="canhcam-vision-1 pt-0" >
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -27,11 +27,11 @@
 	<xsl:template match="News">
 
 		<div class="col-lg-6">
-			<div class="detail" data-aos="fade-up" data-aos-duration="2000">
+			<div class="detail" data-aos="fade-up" data-aos-duration="1000">
 				<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 			</div>
 		</div>
-		<div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+		<div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
 			<figure>
 				<xsl:attribute name="bg-img">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>

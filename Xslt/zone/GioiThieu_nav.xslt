@@ -4,35 +4,33 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-
+		<section class="canhcam-intro-nav">
+			<div class="container">
 				<div class="row">
-					<div class="col wrapper" data-aos="fade-up" data-aos-duration="1500">
+					<div class="col wrapper">
 						<ul class="list-inline list-unstyled">
 							<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 						</ul>
 					</div>
 				</div>
-
-
-
-
+			</div>
+		</section>
 	</xsl:template>
 
 	<xsl:template match="Zone">
 		<li class=" list-inline-item">
-			<xsl:if test="IsActive='true'">
-				<xsl:attribute name="class">
-					<xsl:text>active list-inline-item</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
 			<a class="li-link">
+				<xsl:if test="position() = 1">
+					<xsl:attribute name="class">
+						<xsl:text>li-link active</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
 				<xsl:attribute name="href">
-					<xsl:text disable-output-escaping="yes">#intro-</xsl:text>
+					<xsl:text>#intro-</xsl:text>
 					<xsl:value-of select="position()"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:value-of select="Title"></xsl:value-of>
+				<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 			</a>
 		</li>
-
 	</xsl:template>
 </xsl:stylesheet>

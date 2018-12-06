@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col" data-aos="fade-up" data-aos-duration="1000">
+			<div class="col" >
 				<div class="list-items">
 					<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 				</div>

@@ -14,7 +14,7 @@
 				</h3>
 			</div>
 		</div>
-		<div class="row" data-aos="fade-up" data-aos-duration="1000">
+		<div class="row" >
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</div>
 

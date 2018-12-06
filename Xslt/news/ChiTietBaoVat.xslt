@@ -20,11 +20,11 @@
 							<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
 						</div>
 						<div class="col-md-8 col-lg-6 order-md-1 slider-img">
-							<article class="slider-for" data-aos="zoom-out" data-aos-duration="1500">
+							<article class="slider-for" >
 								<xsl:apply-templates select="/NewsDetail/NewsImages" mode="big"></xsl:apply-templates>
 							</article>
 							<article class="slider-control">
-								<div class="slider-nav" data-aos="fade-up" data-aos-duration="1500">
+								<div class="slider-nav" >
 
 									<xsl:apply-templates select="/NewsDetail/NewsImages" mode="small"></xsl:apply-templates>
 								</div>
@@ -44,7 +44,7 @@
 							</h3>
 						</div>
 					</div>
-					<div class="row" data-aos="fade-up" data-aos-duration="1500">
+					<div class="row">
 						<div class="col">
 							<div class="detail">
 								<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>

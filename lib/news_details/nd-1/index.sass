@@ -19,15 +19,18 @@
 		time
 			color: color-get($mau,text-9)
 		p
+			font-size: r(16px)
+			padding-bottom: r(30px) 
+			color: color-get($mau,text-6)
 			+pad(1rem null)
-			+fz(18px)
-			+media-breakpoint-down(md)
-				+fz(1.2rem)
-			+media-breakpoint-down(sm)
-				+fz(1rem)
-			&:first-child
-				padding-bottom: r(30px) 
-				color: color-get($mau,text-6)
+			+ p
+				color: color-get($mau,text-3)
+				+fz(18px)
+				+media-breakpoint-down(md)
+					+fz(1.2rem)
+				+media-breakpoint-down(sm)
+					+fz(1rem)
+
 		.ps
 			font-weight: 600
 			text-align: right

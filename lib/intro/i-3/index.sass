@@ -5,6 +5,8 @@
 
 .canhcam-intro-3
 	+pad(3rem null)
+	+media-breakpoint-down(sm)
+		+pad(2rem null 3rem null)
 	.head-title
 		+fz(r(30px))
 		font-family: 'Open Sans'
@@ -17,6 +19,8 @@
 			padding-top: 3rem
 		.head-title
 			+pad(r(25px) null)
+			+media-breakpoint-down(sm)
+				+fz(1.9rem)
 			&:after
 				display: block
 				position: absolute

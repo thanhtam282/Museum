@@ -5,7 +5,7 @@
 
 	<!--Begin News-->
 	<xsl:template match="/">
-		<section class="canhcam-service-1 pt-0" bg-img="/Data/Sites/1/skins/default/img/_global/bg_1.png">
+		<section class="canhcam-service-1 pt-0" >
 			<div class="container">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>
@@ -20,7 +20,7 @@
 
 		
 		<div class="row">
-			<div class="col" data-aos="fade-up" data-aos-duration="2000">
+			<div class="col" data-aos="fade-up" data-aos-duration="1000">
 				<h2 class="head-title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</h2>
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col text-center" data-aos="fade-up" data-aos-duration="2000">
+			<div class="col text-center" data-aos="fade-up" data-aos-duration="1000">
 				<div class="owl-carousel owl-theme wrapper-img">
 					<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
 				</div>

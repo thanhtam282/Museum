@@ -5,6 +5,8 @@
 
 .canhcam-intro-5
 	+pad(r(83px) null )
+	+media-breakpoint-down(sm)
+		+pad(3rem null)
 	.title
 		padding-top: 1.5rem
 		+fz(r(30px))
@@ -22,6 +24,10 @@
 			background: color-get($mau, den)
 
 	.depart
+		+media-breakpoint-down(md)
+			padding-bottom: 1rem
+
+
 		h4
 			+pad( null null r(17px) null )
 			+media-breakpoint-down(md)

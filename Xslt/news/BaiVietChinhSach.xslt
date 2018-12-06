@@ -75,7 +75,7 @@
 	<xsl:template match="News" mode="ZoneNews2">
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="detail" data-aos="fade-up" data-aos-duration="2000">
+				<div class="detail" data-aos="fade-up" data-aos-duration="1000">
 					<h4>
 						<xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
 					</h4>
@@ -83,7 +83,7 @@
 					<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 				</div>
 			</div>
-			<div class="col" data-aos="fade-up" data-aos-duration="2000">
+			<div class="col" data-aos="fade-up" data-aos-duration="1000">
 				<figure>
 					<xsl:attribute name="bg-img">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -103,14 +103,14 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col detail_2" data-aos="fade-up" data-aos-duration="2000">
+			<div class="col detail_2" data-aos="fade-up" data-aos-duration="1000">
 				<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 			</div>
 		</div>
 	</xsl:template>
 	<xsl:template match="News" mode="ZoneNews3">
 		<div class="col-lg-4 wrapper_block">
-			<div class="wrapper-contact" data-aos="fade-down" data-aos-duration="2000">
+			<div class="wrapper-contact" data-aos="fade-down" data-aos-duration="1000">
 				<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 
 			</div>

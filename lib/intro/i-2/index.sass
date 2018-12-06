@@ -5,6 +5,8 @@
 
 .canhcam-intro-2
 	+pad(null null 3rem null)
+	+media-breakpoint-down(sm)
+		+pad(null null 1rem null)
 	.head-title
 		+fz(r(30px))
 		font-family: 'Open Sans'
@@ -16,6 +18,8 @@
 		background: color-rgba(color-get($mau,bg-1),.4)
 		+media-breakpoint-down(md)
 			+pad(2rem 1.5rem)
+		+media-breakpoint-down(sm)
+			+pad(3rem  1.5rem 1rem 1.5rem) 
 		ul
 			transition: .5s all ease-in-out
 			+pad( r(25px) 0 r(40px) 0)
