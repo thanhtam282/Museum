@@ -53,12 +53,18 @@
 					display: flex
 					text-transform: capitalize
 					padding: 0.5rem 1rem
+					// padding-bottom: 0
 					color: lighten(color-get($mau,main),30%)
 					span
 						display: block
 						padding-left: .5rem
 					i
 						display: none
+				.nav-top-link
+					padding: 0
+					padding-top: 2px
+					+media-breakpoint-down(md)
+						padding: 0.5rem 1rem
 				&:hover, &.activ, &.show
 					.nav-link, .nav-top-link
 						text-decoration: none
@@ -167,7 +173,7 @@
 				justify-content: flex-end
 			.hotline
 				transition: .5s all ease-in-out
-				+pad(1rem null 5px null)
+				+pad(.5rem null 0 null)
 				.nav-top-link
 					transition: .5s all ease-in-out
 					padding: 0
@@ -188,7 +194,7 @@
 				position: relative
 				&.nav-top
 					+transition(.3s all ease-in-out)
-					+pad(1rem null 5px null)
+					+pad(.5rem null 0 null)
 					.nav-top-item
 						position: relative
 						padding: 0 1rem
@@ -221,21 +227,22 @@
 				.language
 					display: block
 					+transition(.3s all ease-in-out)
-					+pad(1rem null 5px null)
+					+pad(2px null 0 null)
 					a
 						position: relative
 
 
 				.nav-item
 					+ .nav-item
-						margin-left: 1rem
+						margin-left: 2rem
 					&.active
 						.nav-link
 							color: color-get($mau,main-dark)
 					.nav-link
 						color: color-get($mau,text-3)
 						text-transform: uppercase
-						+pad(r(17px) 0)
+						// +pad(r(17px) 0)
+						+pad(r(17px) 0 r(15px) 0)
 						+fz(r(15px))
 						span
 							display: none
@@ -294,13 +301,13 @@
 						text-transform: uppercase
 						text-align: center
 						width: 107px
-						+pad(null r(12px) r(12px))
+						+pad(r(7px)  r(12px))
 						color: color-get($mau,main-light)
 						&:after
 							+transition(0s all ease-in-out)
 							position: absolute
 							display: block
-							top: .5rem
+							top: 0
 							content: "\e85e"
 							font-family: "Linearicons-Free"
 							color: color-get($mau,main-light)
@@ -332,9 +339,8 @@
 							max-height: 2.5rem
 					.register
 						span
-							
-							
-							padding: 1rem .5rem
+							// padding: 1rem .5rem
+							+pad(.5rem .5rem .4rem .5rem)
 							&:after
 								display: none
 	+media-breakpoint-up(xl)
@@ -351,7 +357,7 @@
 						margin-left: r(20px)
 
 					.nav-link
-						+pad(r(17px) 0)
+						+pad(r(17px) 0 r(15px) 0)
 						text-transform: uppercase
 		&.fixedheader
 			&.active

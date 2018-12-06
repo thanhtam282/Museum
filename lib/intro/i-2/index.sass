@@ -4,52 +4,13 @@
 //////////////////////////////////////
 
 .canhcam-intro-2
-	+pad(3rem null)
+	+pad(null null 3rem null)
 	.head-title
 		+fz(r(30px))
 		font-family: 'Open Sans'
 		text-align: center
 		span
 			font-weight: bold
-	.wrapper 
-		ul
-			+flex-center()
-			margin: 0
-			+media-breakpoint-down(md)
-				flex-wrap: wrap
-			li
-				margin-right: 1px
-				a
-					+flex-center()
-					text-align: center
-					background: color-get($mau, bg-xam)
-					display: block
-					+wh(100%)
-					+pad(r(12px) r(16px))
-					+fz(r(18px))
-					color: color-get($mau,text-3)
-					&:hover
-						text-decoration: none
-					
-				&:last-child
-					margin: 0
-				+media-breakpoint-down(md)
-					flex: 0 0 50%
-					margin: 0
-					padding: 1px
-					a
-						+pad(1rem)
-				+media-breakpoint-down(sm)
-					flex: 0 0 100%
-					margin: 0
-					padding: 1px
-					a
-						+pad(1rem)
-						
-			li.active
-				a
-					background: color-get($mau, main)
-					color: color-get($mau,trang)
 	.history
 		+pad(  r(50px) r(80px)   r(100px) r(100px) )
 		background: color-rgba(color-get($mau,bg-1),.4)
@@ -84,7 +45,7 @@
 						+fz(1.5rem)
 
 
-		.y1929-tab, .y1945-tab, .y1956-tab, .y2012-tab
+		.tab-pane
 			.detail
 				height: 100%
 				+flex-center()

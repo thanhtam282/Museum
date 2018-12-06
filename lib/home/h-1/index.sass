@@ -9,9 +9,9 @@
 		margin: 0
 		.item
 			position: relative
-			min-height: 350px
+			min-height: 16rem
 			+media-breakpoint-up(sm)
-				// min-height: 320px
+				min-height: 300px
 			+media-breakpoint-up(md)
 				min-height: 380px
 			+media-breakpoint-up(lg)
@@ -69,5 +69,13 @@
 					height: 2.5rem
 					p
 						line-height: 2.5rem
+				+media-breakpoint-down(sm)
+					width: 15rem
+					p
+						font-size: 1rem
+				+media-breakpoint-down(xs)
+					width: 10.7rem
+					p
+						font-size: r(12px)
 
 					

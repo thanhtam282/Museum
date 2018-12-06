@@ -33,10 +33,13 @@
 					border-top-left-radius: r(10px)
 					flex: 0 0 30%
 				a
-					i
+					text-decoration: none
+					em
 						+fz(4rem)
 						+media-breakpoint-down(sm)
 							font-size: 3rem
+					&:hover
+						text-decoration: none
 			.info
 				+pad(r(20px) 1rem r(34px) null)
 				+flex-center()
@@ -66,12 +69,16 @@
 					+media-breakpoint-down(md)
 						background: none
 					a
-						i
+						text-decoration: none
+						em
 							font-size: 5rem
 							color: color-get($mau,trang)
 							+media-breakpoint-down(sm)
 								font-size: 3rem
 								// color: color-get($mau,main)
+						&:hover
+							text-decoration: none
+
 				.info
 					+pad(null 1rem)
 					p

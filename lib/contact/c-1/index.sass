@@ -17,46 +17,120 @@
 					display: none
 	.fill_info
 		padding-top: r(40px)
+	.info
+		border-radius: r(10px)
+		background: #ebebeb
+		+pad(2rem 1rem 2rem 1.5rem)
+		height: 100%
+		+media-breakpoint-down(md)
+			+pad(2rem)
+			margin-bottom: 2rem
+			height: auto
+		h4
+			font-size: r(25px)
+			color: color-get($mau,main)
+			padding-bottom: r(30px)
+		p
+			font-weight: 600
+			color: color-get($mau,text-6)
+			+fz(r(16px))
+			span
+				color: color-get($mau,text-9)
+				font-weight: normal
+		// 	.form-group
+		// 		margin: 0
+		// 		margin-right: r(30px)
+.Module-203
+	#ctl00_mainContent_ctl04_pnlQuestions
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -15px
 		.form-group
-			width: 100%
+			flex: 0 0 50%
+			max-width: 50%
+			margin: 0
 			margin-bottom: r(20px)
-			+ .form-group
-				margin-left: r(20px)
+			+pad(0 15px)
+			&:last-child
+				max-width: 100%
+				flex: 0 0 100%
 			input, textarea
+				padding: 0.375rem 0.75rem
+				width: 100%
 				color: color-get($mau,text-6)
 				background: #ebebeb
 				+pad(1rem null)
 				border: 0
 				+fz(r(13px))
-		.info
-			border-radius: r(10px)
-			background: #ebebeb
-			+pad(2rem 1rem 2rem 1.5rem)
-			height: 100%
-			+media-breakpoint-down(md)
-				+pad(2rem)
-				margin-bottom: 2rem
-				height: auto
-			h4
-				font-size: r(25px)
-				color: color-get($mau,main)
-				padding-bottom: r(30px)
-			p
-				font-weight: 600
+				border-radius:  0.25rem
+
+	.RadCaptcha
+		#ctl00_mainContent_ctl04_captcha_ctl00
+			display: none
+
+	#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+		display: inline-block
+
+	#ctl00_mainContent_ctl04_captcha_ctl01
+		+flex-center()
+		a
+			font-size: 0
+			&:after
+				content: "\e861"
+				font-family: "Linearicons-Free"
+				font-size: 2rem
+				display: block
+				margin: 0 1rem
+
+	.frm-btnwrap
+		display: inline-flex
+		+mar(3px null 0 2rem)
+		.label
+			display: none
+		input
+			border-radius: 0
+			height: 40px
+	.frm-captcha
+		float: left
+		+flex-center()
+		justify-content: space-between
+		flex-direction: row-reverse
+		width: 75%
+		+media-breakpoint-down(md)
+			width: 65%
+		.frm-captcha-input
+			+wh(100%)
+			.label
+				display: none
+			input
+				height: 40px
+				width: 100%
+				border: 0
 				color: color-get($mau,text-6)
-				+fz(r(16px))
-				span
-					color: color-get($mau,text-9)
-					font-weight: normal
-		.send
-			align-items: center
-			justify-content: flex-end
-			.btn-send
-				background: color-get($mau, main)
-				color: color-get($mau,trang)
+				background: #ebebeb
+				+pad(0 1rem )
+				border-radius:  0.25rem
+
+	.frm-btn
+		.frm-btn-submit
+			background: color-get($mau, main)
+			color: color-get($mau,trang)
+			width: r(150px)
+
+			height: r(47px)
+			+flex-center()
+			+media-breakpoint-down(lg)
+				width: 8rem
+			+media-breakpoint-down(md)
 				width: r(150px)
-				height: r(47px)
-				+flex-center()
-			.form-group
-				margin: 0
-				margin-right: r(30px)
+		.frm-btn-reset
+			display: none
+
+		// .send
+		// 	align-items: center
+		// 	justify-content: flex-end
+.Module-202
+	.ModuleContent
+		height: 100%
+		.aos-init
+			height: 100%

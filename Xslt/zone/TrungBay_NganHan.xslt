@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="tab-pane fade show active" >
+		<div class="tab-pane fade show active">
 			<div class="long-tab">
 				<div class="row">
 					<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>

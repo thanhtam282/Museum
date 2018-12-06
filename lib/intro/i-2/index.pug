@@ -1,97 +1,83 @@
-section.canhcam-intro-2(bg-img='./img/_global/bg_1.png')
+section.canhcam-intro-2#intro-1(bg-img='./img/_global/bg_1.png')
+
 	.container
-		.row
-			.col.wrapper(data-aos="fade-up"  data-aos-duration="1500")
-				ul.list-inline.list-unstyled
-					li.active.list-inline-item
-						a(href="#intro-1").li-link Lịch sử bảo tàng  
-					li.list-inline-item
-						a(href="#intro-2").li-link Thông điệp giám đốc
-					li.list-inline-item
-						a(href="#intro-3").li-link Kiến  trúc và thiết kế  
-					li.list-inline-item
-						a(href="#intro-4").li-link Các phòng chuyên môn
-		.row
-			.col
-				.history
-					.row#intro-1
-						.col
-							h3.head-title Lịch sử 
-								span Bảo Tàng
 
-					.row(style="overflow-x: hidden"  )
-						.col
-							ul#myTab.nav.nav-tabs(role="tablist" data-aos="fade-up"  data-aos-duration="2000")
-								li.nav-item
-									a#y1929-tab.nav-link.active(data-toggle="tab" href="#y1929" role="tab" aria-controls="y1929" aria-selected="true") 1929
-								li.nav-item
-									a#y1945-tab.nav-link(data-toggle="tab" href="#y1945" role="tab" aria-controls="y1945" aria-selected="false") 1945
-								li.nav-item
-									a#y1956-tab.nav-link(data-toggle="tab" href="#y1956" role="tab" aria-controls="y1956" aria-selected="false") 1956
-								li.nav-item
-									a#y2012-tab.nav-link(data-toggle="tab" href="#y2012" role="tab" aria-controls="y2012" aria-selected="false") 2012
+		.history
+			.row
+				.col
+					h3.head-title Lịch sử 
+						span Bảo Tàng
 
-							#myTabContent.tab-content
-								#y1929.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="y1929-tab")
-									.y1929-tab
-										.row(style="overflow-x: hidden")
-											.col-lg-7(data-aos="fade-right"  data-aos-duration="2000")
-												.detail
-													h3.tab-title Năm 1929
-													p Bảo tàng Lịch sử Thành phố Hồ Chí Minh là một bảo tàng lớn và có lịch sử phát triển lâu đời ở khu vực phía Nam Việt Nam. Tọa lạc tại trung tâm thành phố, Bảo tàng là điểm đến thu hút đông đảo công chúng trong nước và quốc tế. 
-													p Bảo tàng Lịch sử Thành phố Hồ Chí Minh trước đây là Bảo tàng Blanchard de la Brosse (tên của viên thống đốc Nam Kỳ) thành lập và là bảo tàng đầu tiên ở phía Nam Việt Nam. 
- 
-											.col(data-aos="fade-left"  data-aos-duration="2000")
-												figure
-													.img
-														img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
+			.row
+				.col
+					ul#myTab.nav.nav-tabs(role="tablist" )
 
-								#y1945.tab-pane.fade(role="tabpanel" aria-labelledby="y1945-tab")
-									.y1945-tab
-										.row
-											.col-lg-7
-												.detail
-													h3.tab-title Năm 1945
-													p Bảo tàng mang tên “Viện Bảo tàng Quốc gia Việt Nam” tại Sài Gòn, nơi trưng bày về mỹ thuật cổ một số nước Châu Á. 
-													p Cho đến ngày 23/8/1979, bảo tàng chính thức đổi tên như ngày hôm nay theo Quyết định số 235QĐ-UB của Ủy ban Nhân dân Thành phố Hồ Chí Minh.  
-													p Hiện nay, Bảo tàng sở hữu hơn 40.000 hiện vật với nhiều sưu tập độc đáo, quý giá có nguồn gốc từ nhiều quốc gia, dân tộc; chất liệu, loại hình vô cùng đa dạng, phong phú.
- 
- 
- 
-											.col
-												figure
-													.img
-														img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
+						li.nav-item
+							a.nav-link.active(data-toggle="tab" href="#year-1" ) 1929
+						li.nav-item
+							a.nav-link(data-toggle="tab" href="#year-2" ) 1945
+						li.nav-item
+							a.nav-link(data-toggle="tab" href="#year-3" ) 1956
+						li.nav-item
+							a.nav-link(data-toggle="tab" href="#year-4" ) 2012
 
-								#y1956.tab-pane.fade(role="tabpanel" aria-labelledby="y1956-tab")
-									.y1956-tab
-										.row
-											.col-lg-7
-												.detail
-													h3.tab-title Năm 1956
-													p Các bộ sưu tập giới  giới thiệu về lịch sử, văn hóa Việt Nam từ  thời nguyên thủy đến và giới thiệu về những nét văn hóa độc đáo ở các tỉnh phía Nam và một số nước trong khu vực châu Á.
-													p Bảo tàng cũng là nơi làm việc của nhiều chuyên gia, các nhà nghiên cứu về lịch sử, văn hóa, xã hội Việt Nam,các nền văn hóa trong khu vực và trên thế giới cùng đội ngũ nhân viên có trình độ, kinh nghiệm.
-													p Trong xu thế phát triển hiện nay, để có thể đáp ứng nhu cầu thưởng thức những giá trị văn hóa trong đời sống tinh thần của công chúng, Bảo tàng luôn phải tự đổi mới các hoạt động với mục đích hướng đến Bảo tàng vì cộng đồng.
+					#myTabContent.tab-content
+						#year-1.tab-pane.fade.show.active
+							.row
+								.col-lg-7
+									.detail
+										h3.tab-title Năm 1929
+										p Bảo tàng Lịch sử Thành phố Hồ Chí Minh là một bảo tàng lớn và có lịch sử phát triển lâu đời ở khu vực phía Nam Việt Nam. Tọa lạc tại trung tâm thành phố, Bảo tàng là điểm đến thu hút đông đảo công chúng trong nước và quốc tế. 
+										p Bảo tàng Lịch sử Thành phố Hồ Chí Minh trước đây là Bảo tàng Blanchard de la Brosse (tên của viên thống đốc Nam Kỳ) thành lập và là bảo tàng đầu tiên ở phía Nam Việt Nam. 
+
+								.col
+									figure
+										.img
+											img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
+
+						#year-2.tab-pane.fade
+							.row
+								.col-lg-7
+									.detail
+										h3.tab-title Năm 1945
+										p Bảo tàng mang tên “Viện Bảo tàng Quốc gia Việt Nam” tại Sài Gòn, nơi trưng bày về mỹ thuật cổ một số nước Châu Á. 
+										p Cho đến ngày 23/8/1979, bảo tàng chính thức đổi tên như ngày hôm nay theo Quyết định số 235QĐ-UB của Ủy ban Nhân dân Thành phố Hồ Chí Minh.  
+										p Hiện nay, Bảo tàng sở hữu hơn 40.000 hiện vật với nhiều sưu tập độc đáo, quý giá có nguồn gốc từ nhiều quốc gia, dân tộc; chất liệu, loại hình vô cùng đa dạng, phong phú.
 
 
- 
- 
-											.col
-												figure
-													.img
-														img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
 
-								#y2012.tab-pane.fade(role="tabpanel" aria-labelledby="y2012-tab")
-									.y2012-tab
-										.row
-											.col-lg-7
-												.detail
-													h3.tab-title Năm 2012
-													p Tòa nhà Bảo tàng được công nhận là Di tích kiến trúc nghệ thuật cấp Quốc gia. Một kiến trúc mang đậm nét phương Đông kết hợp với phương Tây tạo nên một kết cấu công trình vững chải, hài hòa, cân xứng với cảnh quan xung quanh.
- 
-  
- 
-											.col
-												figure
-													.img
-														img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
+								.col
+									figure
+										.img
+											img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
+
+						#year-3.tab-pane.fade
+							.row
+								.col-lg-7
+									.detail
+										h3.tab-title Năm 1956
+										p Các bộ sưu tập giới  giới thiệu về lịch sử, văn hóa Việt Nam từ  thời nguyên thủy đến và giới thiệu về những nét văn hóa độc đáo ở các tỉnh phía Nam và một số nước trong khu vực châu Á.
+										p Bảo tàng cũng là nơi làm việc của nhiều chuyên gia, các nhà nghiên cứu về lịch sử, văn hóa, xã hội Việt Nam,các nền văn hóa trong khu vực và trên thế giới cùng đội ngũ nhân viên có trình độ, kinh nghiệm.
+										p Trong xu thế phát triển hiện nay, để có thể đáp ứng nhu cầu thưởng thức những giá trị văn hóa trong đời sống tinh thần của công chúng, Bảo tàng luôn phải tự đổi mới các hoạt động với mục đích hướng đến Bảo tàng vì cộng đồng.
+
+
+
+
+								.col
+									figure
+										.img
+											img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')
+
+						#year-4.tab-pane.fade
+							.row
+								.col-lg-7
+									.detail
+										h3.tab-title Năm 2012
+										p Tòa nhà Bảo tàng được công nhận là Di tích kiến trúc nghệ thuật cấp Quốc gia. Một kiến trúc mang đậm nét phương Đông kết hợp với phương Tây tạo nên một kết cấu công trình vững chải, hài hòa, cân xứng với cảnh quan xung quanh.
+
+
+
+								.col
+									figure
+										.img
+											img.img-fluid(src='./img/01_gioithieu/gioithieu_lichsu.png', alt='')

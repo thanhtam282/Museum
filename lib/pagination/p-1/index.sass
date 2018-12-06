@@ -10,7 +10,7 @@
 		li
 			+ li
 				margin-left: 9px
-			a
+			a, span
 				text-decoration: none
 				color: #999999
 				+pad(.25rem .5rem)
@@ -19,11 +19,11 @@
 				background: #ebebeb
 				+flex-center
 			&.active
-				a
+				a, span
 					color: color-get($mau,trang)
 					background: color-get($mau, main)
 					
-			a
+			a, span
 				color: #999
 				em
 					+fz(r(20px))

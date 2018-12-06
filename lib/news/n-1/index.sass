@@ -108,9 +108,14 @@
 							background: color-get($mau, main)
 							+wh(5px)
 					p
+						overflow: hidden
+						text-overflow: ellipsis
+						display: -webkit-box
 						-webkit-line-clamp: 3
+						-webkit-box-orient: vertical
 						+fz(r(13px))
-						+pad( r(10px) null 1rem null)
+						+pad( r(10px) null 0 null)
+						margin-bottom: 1rem
 					time
 						position: absolute
 						bottom: 0
