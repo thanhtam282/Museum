@@ -9,6 +9,8 @@
 	// 	+pad(0 0 4rem 0)
 	.news-hot
 		+pad(4rem null)
+		.news-title
+			color: color-get($mau,main)
 		.item
 			text-decoration: none
 			figure
@@ -26,13 +28,13 @@
 
 					h3
 						+fz(r(18px))
-						+fw(600)
+						+fw(700)
 						color: color-get($mau,text-3)
 						text-transform: uppercase
 						margin: 0
 					time
 						+fz(r(15px))
-						+fw(600)
+						+fw(700)
 						color: color-get($mau,text-9)
 						
 					p
@@ -116,6 +118,8 @@
 						+fz(r(13px))
 						+pad( r(10px) null 0 null)
 						margin-bottom: 1rem
+						+media-breakpoint-down(md)
+							-webkit-line-clamp: 2
 					time
 						position: absolute
 						bottom: 0
@@ -126,4 +130,6 @@
 				figcaption
 					+pad(1rem)
 
-					
+	.pagination
+		margin-top: -3rem
+		padding-bottom: 3rem

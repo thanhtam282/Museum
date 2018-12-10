@@ -5,7 +5,7 @@
 
 	<!--Begin News-->
 	<xsl:template match="/">
-		<section class="canhcam-subject-details-1" bg-img="/Data/Sites/1/skins/default/img/_global/bg_1.png">
+		<section class="canhcam-subject-details-1" >
 			<article class="news-details">
 				<div class="container">
 					<div class="row">
@@ -18,8 +18,8 @@
 									<xsl:value-of select="/NewsDetail/CreatedDate"></xsl:value-of>
 								</time>
 								<p>
-								<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
-							</p>
+									<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
+								</p>
 								<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
 
 								<div class="social-networks nav">
@@ -38,15 +38,20 @@
 										<div class="g-plusone" data-size="tall">
 										</div>
 									</div>
+									<div class="nav-item">
+										<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US
+										</script>
+										<script type="IN/Share"></script>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-3" data-aos="fade-up" data-aos-duration="2000">
 							<div class="othernews" data-fix="80" data-fix-type="initial" data-fix-change="sticky">
 								<h2>
-									<xsl:value-of select="/NewsDetail/NewsOtherText"></xsl:value-of>
+									TIN TỨC KHÁC
 								</h2>
-								<hr/>
+								<hr />
 
 								<div class="lists">
 									<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>

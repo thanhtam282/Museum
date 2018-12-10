@@ -12,7 +12,12 @@
 	<xsl:template match="Zone">
 		<li class="nav-item">
 			<xsl:if test="position() = 1 ">
-				<a class="nav-link" href="#">
+				<a class="nav-link">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>nav-link active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
@@ -24,6 +29,11 @@
 			</xsl:if>
 			<xsl:if test="position() &gt; 1 ">
 				<a class="nav-link">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>nav-link active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>

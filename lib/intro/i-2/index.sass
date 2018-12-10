@@ -11,11 +11,13 @@
 		+fz(r(30px))
 		font-family: 'Open Sans'
 		text-align: center
-		span
-			font-weight: bold
+		strong
+			font-weight: 700
+		&:after
+			width: 0
 	.history
 		+pad(  r(50px) r(80px)   r(100px) r(100px) )
-		background: color-rgba(color-get($mau,bg-1),.4)
+		background: color-rgba(color-get($mau,bg-1),.5)
 		+media-breakpoint-down(md)
 			+pad(2rem 1.5rem)
 		+media-breakpoint-down(sm)
@@ -58,6 +60,7 @@
 
 				.tab-title
 					padding-bottom: .5rem
+					font-weight: bold
 					+fz(30px)
 					text-transform: uppercase
 					color: color-get($mau,do-2)
@@ -74,6 +77,7 @@
 						left: 0
 				p
 					+pad(r(24px) r(50px) 0 0)
+					color: #4b4b4b
 					+fz(r(15px))
 					+media-breakpoint-down(md)
 						+pad(1.2rem 0 0 0)
@@ -91,6 +95,10 @@
 						+wh(100%)
 						bottom: -1.5rem
 						right:  -1.5rem
+						overflow: hidden
+						+media-breakpoint-down(lg)
+							bottom: -1rem
+							right:  -1rem
 						+media-breakpoint-down(md)
 							display: none
 					img

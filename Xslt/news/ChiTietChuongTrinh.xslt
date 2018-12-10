@@ -37,13 +37,18 @@
 										<div class="g-plusone" data-size="tall">
 										</div>
 									</div>
+									<div class="nav-item">
+										<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US
+										</script>
+										<script type="IN/Share"></script>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-3" data-aos="fade-up" data-aos-duration="2000">
 							<div class="othernews" data-fix="80" data-fix-type="initial" data-fix-change="sticky">
 								<h2>
-									<xsl:value-of select="/NewsDetail/NewsOtherText"></xsl:value-of>
+									TIN TỨC KHÁC
 								</h2>
 								<hr/>
 

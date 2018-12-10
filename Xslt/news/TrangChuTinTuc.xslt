@@ -14,7 +14,7 @@
 				</h3>
 			</div>
 		</div>
-		<div class="row" >
+		<div class="row">
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</div>
 
@@ -25,21 +25,28 @@
 		<!--item-->
 		<xsl:if test="position() = 1 ">
 			<div class="col-12">
-				<figure class="hot-news">
-					<div class="img">
-						<img class="w-100">
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="title">
-							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-						</xsl:attribute>
-						</img>
-					</div>
-					<figcaption><a>
+				<a>
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="target">
+						<xsl:value-of select="Target"></xsl:value-of>
+					</xsl:attribute>
+					<figure class="hot-news">
+						<div class="img">
+							<img class="w-100">
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+							</xsl:attribute>
+							</img>
+						</div>
+						<figcaption>
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
@@ -49,13 +56,14 @@
 							<h5>
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 							</h5>
-						</a></figcaption>
-				</figure>
+						</figcaption>
+					</figure>
+				</a>
 			</div>
 		</xsl:if>
 		<xsl:if test="position() > 1 ">
 			<div class="col-12">
-				<div class="sub-news"><a >
+				<div class="sub-news"><a>
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>

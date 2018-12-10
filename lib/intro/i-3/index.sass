@@ -11,7 +11,7 @@
 		+fz(r(30px))
 		font-family: 'Open Sans'
 		text-align: center
-		span
+		strong
 			font-weight: bold
 	.mess
 		// padding-top: r(80px)
@@ -33,16 +33,19 @@
 				background: color-get($mau, den)
 	.quote
 		p
+			color: #4b4b4b
 			+fz(15px)
 			+pad(0 0 r(20px) 0)
+			line-height: r(26px)
 			span
 				text-transform: uppercase
-				font-weight: 600
+				font-weight: 700
 			&:first-child
 				padding-top: 0
 			&:last-child
+				font-style: italic
 				+pad(1rem  0 0  1rem )
-				border-left: 2px solid color-get($mau,main)
+				border-left: 3px solid color-get($mau,main)
 		figure
 			height: 100%
 			+media-breakpoint-down(md)
@@ -53,5 +56,13 @@
 	.quote2
 		padding-top: 1rem
 		p
+			line-height: r(26px)
+			color: #4b4b4b
 			+fz(15px)
 			+pad(r(20px) 0 0 0)
+			&:nth-last-child(2)
+				+fz(r(18px))
+			&:last-child
+				+fz(16px)
+				padding: 0
+

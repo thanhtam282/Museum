@@ -10,7 +10,7 @@
 		.title
 			font-size: r(22px)
 			color: color-get($mau,text-6)
-			font-weight: 600
+			font-weight: 700
 		.detail
 			// +mar(1rem .5rem  0 .5rem  )
 			// overflow: hidden
@@ -34,7 +34,7 @@
 					// margin: 0
 					span
 						color: color-get($mau,main)
-						font-weight: 600
+						font-weight: 700
 						text-align: right
 				p
 					color: color-get($mau,text-9)
@@ -92,15 +92,15 @@
 				text-align: right
 				+fz(r(18px))
 				color: color-get($mau,text-6)
-		.hot-news
-			position: relative
-			margin: 0
-			.img
-			figcaption
-				+pad(1rem)
-				position: absolute
-				bottom: 0
-				a
+		a
+			.hot-news
+				position: relative
+				margin: 0
+				.img
+				figcaption
+					+pad(1rem)
+					position: absolute
+					bottom: 0
 					h5
 						overflow: hidden
 						text-overflow: ellipsis
@@ -108,8 +108,8 @@
 						-webkit-line-clamp: 2
 						-webkit-box-orient: vertical
 						color: color-get($mau,trang)
-					&:hover
-						text-decoration: none
+			&:hover
+				text-decoration: none
 
 		.sub-news
 			+pad(r(13px) r(13px) r(13px) 0)
@@ -158,6 +158,8 @@
 			a
 				+mar(null .5rem)
 				+media-breakpoint-up(lg)
+					+mar(null .5rem)
+				+media-breakpoint-up(xl)
 					+mar(null 1rem)
 				+wh(r(54px))
 				+bor-rad(50%)

@@ -12,6 +12,11 @@
 	<xsl:template match="Zone">
 		<li class="nav-top-item">
 			<a class="nav-top-link">
+				<xsl:if test="IsActive='true'">
+					<xsl:attribute name="class">
+						<xsl:text>nav-top-link active</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
