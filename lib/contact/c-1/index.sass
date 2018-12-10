@@ -77,8 +77,16 @@
 				
 
 	.RadCaptcha
+		position: relative
 		#ctl00_mainContent_ctl04_captcha_ctl00
-			display: none
+			// display: none
+			position: absolute
+			bottom: -1.5rem
+			color: red
+
+			+media-breakpoint-down(md)
+				bottom: initial
+				top: -1.5rem
 
 	#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
 		display: inline-block
