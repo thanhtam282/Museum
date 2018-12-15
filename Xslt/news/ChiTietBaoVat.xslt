@@ -73,7 +73,16 @@
 
 	<!--Begin News Other Child-->
 	<xsl:template match="NewsOther">
-		<a href="#">
+		<a>
+			<xsl:attribute name="href">
+				<xsl:value-of select="Url"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="target">
+				<xsl:value-of select="Target"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="title">
+				<xsl:value-of select="Title"></xsl:value-of>
+			</xsl:attribute>
 			<div class="item">
 				<img >
 				<xsl:attribute name="src">

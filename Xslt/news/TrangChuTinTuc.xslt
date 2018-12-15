@@ -10,7 +10,9 @@
 			<div class="col">
 				<h3 class="text-left title">
 					<xsl:value-of select="/NewsList/ModuleTitle"></xsl:value-of>
-					<a href="#"><i class="fas fa-plus-square"></i></a>
+					<a href="/tin-tuc-1">
+					
+					<i class="fas fa-plus-square"></i></a>
 				</h3>
 			</div>
 		</div>

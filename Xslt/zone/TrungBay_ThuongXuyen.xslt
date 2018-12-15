@@ -20,7 +20,7 @@
 	</xsl:template>
 
 	<xsl:template match="Zone">
-		<div class="col-md-6 col-lg-3" >
+		<div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-duration="2000" >
 			<a>
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>

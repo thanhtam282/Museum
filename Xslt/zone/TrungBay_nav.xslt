@@ -38,7 +38,7 @@
 						<xsl:text>nav-link active</xsl:text>
 					</xsl:attribute>
 				</xsl:if>
-				<xsl:if test="position() = 1 " >
+				<xsl:if test="position() = 2 " >
 					<xsl:attribute name="class">
 						<xsl:text>nav-link active</xsl:text>
 					</xsl:attribute>

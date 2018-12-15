@@ -10,7 +10,7 @@
 					<div class="col gallery">
 						<h3 class="text-left title">
 							<xsl:value-of select="/ZoneList/ModuleTitle"></xsl:value-of>
-							<a href="#"><i class="fas fa-plus-square"></i></a>
+							<a href="/bo-suu-tap"><i class="fas fa-plus-square"></i></a>
 						</h3>
 					</div>
 				</div>

@@ -175,7 +175,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 							</div>
 							<figcaption>
 								<portal:ModuleWrapper ID="mdl151" runat="server" ConfigureModuleId="151" />
-
+								<p>Copyright © 2018 BẢO TÀNG LỊCH SỬ Tp. HỒ CHÍ MINH. All rights reserved. Design by Canh Cam.</p>
 							</figcaption>
 						</figure>
 					</div>
