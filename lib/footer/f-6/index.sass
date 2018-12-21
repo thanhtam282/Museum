@@ -74,29 +74,11 @@
 	.info
 		background: color-get($mau, trang)
 		+pad(1rem null)
-		.wrapper
-			display: flex
-			margin: 0
+		p
+			+fz(r(13px))
+			color: color-get($mau,text-6)
 			+media-breakpoint-down(sm)
-				flex-direction: column
-				align-items: center
-			img
-				max-height: 4rem
-			figcaption
-				display: flex
-				flex-direction: column
-				justify-content: flex-end
-				p
-					+fz(r(13px))
-					padding-left: 2rem
-					color: color-get($mau,text-6)
-					+media-breakpoint-down(sm)
-						padding-left: 0
-						padding-top: 1rem !important
-					span
-						color: color-get($mau,text-9)
-				p:last-child
-					padding-top: .5rem
-					color: color-get($mau,text-6)
-
-
+				padding-left: 0
+				padding-top: 1rem !important
+			span
+				color: color-get($mau,text-9)

@@ -14,38 +14,27 @@
 
 
 	<xsl:template match="Zone">
-		<xsl:if test="position() = 1">
-		<div class="link active">
-			<a>
-				<!-- <xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute> -->
-				<p class="active">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</p>
-			</a>
-			<div class="sub-link">
-				<xsl:apply-templates select="Zone" mode="Zonesub"></xsl:apply-templates>
-			</div>
-		</div>
-		
-		</xsl:if>
-		<xsl:if test="position() &gt; 1">
-
 		<div class="link">
+			<xsl:if test="position() = 1">
+				<xsl:attribute name="class">
+					<xsl:text>link active</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
 			<a>
-				<!-- <xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute> -->
-				<p class="active">
+				<p>
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<xsl:value-of select="Title"></xsl:value-of>
 				</p>
 			</a>
 			<div class="sub-link">
 				<xsl:apply-templates select="Zone" mode="Zonesub"></xsl:apply-templates>
 			</div>
+
 		</div>
-		</xsl:if>
 
 	</xsl:template>
 
