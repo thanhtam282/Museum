@@ -84,6 +84,14 @@
 									background: color-get($mau, trang)
 									box-shadow: 0px 0px 0px 1px color-get($mau,main) inset
 									color: color-get($mau,main)
+	.info
+		.title
+			display: flex
+			justify-content: space-between
+			i
+				text-align: right
+				+fz(r(22px))
+				color: color-get($mau,main)
 	.news
 		.title
 			display: flex
@@ -171,10 +179,29 @@
 					+fz(r(20px))
 				&:hover
 					text-decoration: none
-					box-shadow: 0px 0px 0px 2px color-get($mau,xam-1) inset
-					background: color-get($mau, trang)
-					em
-						color: color-get($mau,xam-1)
+				+media-breakpoint-up(md)
+					&:nth-child(1)
+						&:hover
+							background: red
+							em
+								color: color-get($mau,trang)
+					&:nth-child(2)
+						&:hover
+							background: #20abf5
+							em
+								color: color-get($mau,trang)
+					&:nth-child(3)
+						&:hover
+							background: #4166a2
+							em
+								color: color-get($mau,trang)
+					&:nth-child(4)
+						&:hover
+							background: #d6249f
+							background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
+							em
+								color: color-get($mau,trang)
+
 
 		.dropdown
 			background: transparent

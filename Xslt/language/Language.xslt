@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="language">
+		<div class="language" k-menu-map-to="#language">
 			<xsl:apply-templates select="/LanguageList/Language"></xsl:apply-templates>
 		</div>
 	</xsl:template>

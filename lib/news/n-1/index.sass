@@ -74,7 +74,7 @@
 							display: block
 							content: ""
 							width: 3px
-							height: r(100px)
+							height: calc(100% - 2rem)
 							background: color-get($mau, main)
 							top: 0
 						h3
@@ -94,21 +94,26 @@
 				.img
 					flex: 0 0 40%
 				figcaption
-					padding-left: r(30px)
+					padding-left: r(16px)
+					margin-left: 1rem
+					position: relative
 					+media-breakpoint-down(sm)
+						margin-left: 0
 						+pad(1rem)
+					&:after
+						top: .5rem
+						content: ""
+						position: absolute
+						display: block
+						left: 0
+						background: color-get($mau, main)
+						+wh(5px)
+						+media-breakpoint-down(sm)
+							top: 1.3rem
 					h3
 						font-size: r(15px)
 						text-transform: none
 						position: relative
-						&:after
-							top: .5rem
-							content: ""
-							position: absolute
-							display: block
-							left: -1rem
-							background: color-get($mau, main)
-							+wh(5px)
 					p
 						overflow: hidden
 						text-overflow: ellipsis
@@ -128,7 +133,17 @@
 			figure
 				flex-direction: column
 				figcaption
+					margin-left: 0
 					+pad(1rem)
+					&:after
+						top: 1.3rem
+					h3
+						height: r(38px)
+						overflow: hidden
+						text-overflow: ellipsis
+						display: -webkit-box
+						-webkit-line-clamp: 3
+						-webkit-box-orient: vertical
 
 	.pagination
 		margin-top: -3rem

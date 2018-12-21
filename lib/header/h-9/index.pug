@@ -1,19 +1,27 @@
 header.canhcam-header-12
 	.k-menu-bar.container
-		#logo.mr-auto
+		//- .block-left
+		//- .block-right
+		#language
+		#hotline
+		#logo.mx-auto
+
+
+		#register
 		button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
 			i.mdi.mdi-menu
 	#demoResAllInOneMenu.container.k-responsive-menu
 		.k-menu-bar
 			.k-logo.navbar-brand.mr-auto
 				img(src="./img/_global/logo.png", alt="")
+			
 			button.k-button-toggle.navbar-toggler(k-toggle-for="#demoResAllInOneMenu")
 				i.mdi.mdi-close
 		.k-logo.navbar-brand(k-menu-map-to="#logo")
 			img(src="./img/_global/logo.png", alt="")
 		.nav.mainnav.ml-auto
 			.wrapper-top
-				.hotline
+				.hotline(k-menu-map-to="#hotline")
 					a.nav-top-link(href='#') Hotline:   
 						span 0283 8258 783
 				ul.nav-top.nav
@@ -23,11 +31,11 @@ header.canhcam-header-12
 						a.nav-top-link(href='#') Tin tức 
 					li.nav-top-item
 						a.nav-top-link(href='#') Liên hệ
-				.language
+				.language(k-menu-map-to='#language')
 					a(href='#')
 						img(src="./img/_global/us_lang.png", alt="")
-					a(href='#')
-						img(src="./img/_global/vn_lang.png", alt="")
+					//- a(href='#')
+						//- img(src="./img/_global/vn_lang.png", alt="")
 					
 
 			.wrapper
@@ -39,15 +47,42 @@ header.canhcam-header-12
 
 					li.nav-item.active
 						a.nav-link(href='#')  giới thiệu
+						.sub-link
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+
 					li.nav-item
 						a.nav-link(href='#')  bộ sưu tập 
+						.sub-link
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
 					li.nav-item
 						a.nav-link(href='#') chương trình giáo dục
+						.sub-link
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
 					li.nav-item
 						a.nav-link(href='#') triển lãm
+						.sub-link
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
 					li.nav-item
 						a.nav-link(href='#') tham quan
+						.sub-link
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
+							a(href='#')  giới thiệu
 					
+
 				a.search 
 					i.material-icons search
 				.searchbox
@@ -55,7 +90,7 @@ header.canhcam-header-12
 					button.searchbutton(type='submit')
 						i.fa.fa-search
 
-		.register
+		.register(k-menu-map-to="#register")
 			a(href="#modal-1")
 				span Đăng ký thuyết minh
 				

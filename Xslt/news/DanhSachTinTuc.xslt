@@ -109,10 +109,10 @@
 		<xsl:if test="position() = 4 ">
 			<xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
 			<xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-			<xsl:text disable-output-escaping="yes">&lt;div class="row other-list"&gt;</xsl:text>
+			<!-- <xsl:text disable-output-escaping="yes">&lt;div &gt;</xsl:text> -->
 		</xsl:if>
 		<xsl:if test="position() &gt; 4 ">
-			<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="2000">
+			<div class="col-lg-4 col-md-6 other-list" data-aos="fade-up" data-aos-duration="2000">
 				<a class="item" href="#">
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>

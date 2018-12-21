@@ -80,9 +80,14 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 		<div id="wrapper">
 			<header class="canhcam-header-12">
 				<div class="k-menu-bar container">
-					<div class="mr-auto" id="logo">
-
-					</div>
+						<!-- <div id="logo"></div>
+						<div id="language"></div>
+						<div id="hotline"></div>
+						<div class="ml-auto" id="register"></div> -->
+						<div id="language"></div>
+						<div id="hotline"></div>
+						<div class="mx-auto" id="logo"></div>
+						<div id="register"></div>
 					<!-- <div id="language">
 
 						<a href="#"><img src="./img/_global/us_lang.png" alt=""></a>
@@ -102,7 +107,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 					</div>
 					<div class="nav mainnav ml-auto">
 						<div class="wrapper-top">
-							<div class="hotline">
+							<div class="hotline" k-menu-map-to="#hotline">
 								<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
 
 							</div>
@@ -119,7 +124,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 
 						</div>
 					</div>
-					<div class="register">
+					<div class="register" k-menu-map-to="#register">
 						<portal:ModuleWrapper ID="mdl146" runat="server" ConfigureModuleId="146" />
 					</div>
 					

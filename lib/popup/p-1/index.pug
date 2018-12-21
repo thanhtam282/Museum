@@ -1,69 +1,69 @@
-section.canhcam-popup-1
-	.container
-		.row.remodal(data-remodal-id="modal-1" bg-img='./img/_global/bg_1.png')
-			.col-md-12.col-lg.order-2.order-lg-1
-				h3.news-title đăng kí
-				p Quý khách vui lòng điền thông tin vào mẫu bên dưới để đăng kí !
-					span(data-remodal-action="close").lnr.ln-rcross
-				#ctl00_mainContent_ctl04_pnlFormWizard
-					#ctl00_mainContent_ctl04_pnlForm.wrap-form
-						#ctl00_mdl234_ctl00_pnlQuestions
-							.form-group.qtext
-								label Họ và tên
-								input( type="text" placeholder="Vd: Nguyễn Văn A")
-							.form-group.qtext
-								label Email
-								input( type="text" placeholder="Vd: nguyenvana@gmail.com")
-							.form-group.qtext
-								label Số điện thoại
-								input( type="text" placeholder="Vd: 0813456789")
-							.form-group.qdropdown
-								label Ngày
-								select.cus_option
-									//- option(value="") Ngày
-									- for (var x = 1; x < 32; x++)
-										option(value=""+x+"") #{x}
-							.form-group.qdropdown
-								label Tháng
-								select.cus_option
-									//- option(value="") Tháng
-									- for (var x = 1; x < 13; x++)
-										option(value=""+x+"") #{x}
-							.form-group.qdropdown
-								label Năm
-								select.cus_option
-									//- option(value="") Năm
-									- for (var x = 2017; x < 2021; x++)
-										option(value=""+x+"") #{x}
-							.form-group.qdropdown
-								label Thời gian
-								select.cus_option
-									//- option(value="") Thời gian
-									- for (var x = 0; x < 24; x++)
-										- for (var y = 00; y < 60; y=y+10)
-											option(value=""+x+"") #{x}
-												span :#{y}
-						//- .form-group.frm-captcha
-						//- 	.frm-captcha-input
-						//- 		label.label
-						//- 			| Nhập mã hiển thị
-						//- 		input( type="text" maxlength="5" placeholder="Nhập mã hiển thị")
-						//- 	.RadCaptcha.RadCaptcha_Default(style="width:50%;")
-						//- 		span(style="visibility:hidden;") Mã không đúng.
-						//- 		#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
-						//- 			#ctl00_mainContent_ctl04_captcha_ctl01
-						//- 				img(alt=""  style="height:50px;width:180px;display:block;")
-						//- 				a.rcRefreshImage(title="Hình ảnh mới" style="display:block;") Hình ảnh mới
-						//- 		input(name="ctl00_mainContent_ctl04_captcha_ClientState" type="hidden" autocomplete="off")
-						//- #ctl00_mainContent_ctl04_up1(style="display:none;" role="status" aria-hidden="true")
-						//- 	img(src="/Data/SiteImages/indicators/indicator1.gif" alt=" ")
-						//- .form-group.frm-btnwrap
-						//- 	label.label  
-						//- 	.frm-btn
-						//- 		input.btn.btn-default.frm-btn-submit(type="submit" name="ctl00$mainContent$ctl04$btnSubmit" value="Gửi" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$mainContent$ctl04$btnSubmit", "", true, "formwizard76fa71ec-9aa7-46d0-b7b0-dec71e4bc7be", "", false, false))')
-						//- 		input.btn.btn-default.frm-btn-reset( type="reset" value="Xóa")
-						//- 		input(type="hidden" )
-						//- .clear
-						.frm-btnwrap
-							.frm-btn
-								a(href="#").btn.btn-reg Đăng kí
+//- section.canhcam-popup-1
+//- 	.container
+.row.remodal(data-remodal-id="modal-1" bg-img='./img/_global/bg_1.png')
+	.col-md-12.col-lg.order-2.order-lg-1
+		h3.news-title đăng kí
+		p Quý khách vui lòng điền thông tin vào mẫu bên dưới để đăng kí !
+			span(data-remodal-action="close").lnr.ln-rcross
+		#ctl00_mainContent_ctl04_pnlFormWizard
+			#ctl00_mainContent_ctl04_pnlForm.wrap-form
+				#ctl00_mdl234_ctl00_pnlQuestions
+					.form-group.qtext
+						label Họ và tên
+						input( type="text" placeholder="Vd: Nguyễn Văn A")
+					.form-group.qtext
+						label Email
+						input( type="text" placeholder="Vd: nguyenvana@gmail.com")
+					.form-group.qtext
+						label Số điện thoại
+						input( type="text" placeholder="Vd: 0813456789")
+					.form-group.qdropdown
+						label Ngày
+						select.cus_option
+							//- option(value="") Ngày
+							- for (var x = 1; x < 32; x++)
+								option(value=""+x+"") #{x}
+					.form-group.qdropdown
+						label Tháng
+						select.cus_option
+							//- option(value="") Tháng
+							- for (var x = 1; x < 13; x++)
+								option(value=""+x+"") #{x}
+					.form-group.qdropdown
+						label Năm
+						select.cus_option
+							//- option(value="") Năm
+							- for (var x = 2017; x < 2021; x++)
+								option(value=""+x+"") #{x}
+					.form-group.qdropdown
+						label Thời gian
+						select.cus_option
+							//- option(value="") Thời gian
+							- for (var x = 0; x < 24; x++)
+								- for (var y = 00; y < 60; y=y+10)
+									option(value=""+x+"") #{x}
+										span :#{y}
+				//- .form-group.frm-captcha
+				//- 	.frm-captcha-input
+				//- 		label.label
+				//- 			| Nhập mã hiển thị
+				//- 		input( type="text" maxlength="5" placeholder="Nhập mã hiển thị")
+				//- 	.RadCaptcha.RadCaptcha_Default(style="width:50%;")
+				//- 		span(style="visibility:hidden;") Mã không đúng.
+				//- 		#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+				//- 			#ctl00_mainContent_ctl04_captcha_ctl01
+				//- 				img(alt=""  style="height:50px;width:180px;display:block;")
+				//- 				a.rcRefreshImage(title="Hình ảnh mới" style="display:block;") Hình ảnh mới
+				//- 		input(name="ctl00_mainContent_ctl04_captcha_ClientState" type="hidden" autocomplete="off")
+				//- #ctl00_mainContent_ctl04_up1(style="display:none;" role="status" aria-hidden="true")
+				//- 	img(src="/Data/SiteImages/indicators/indicator1.gif" alt=" ")
+				//- .form-group.frm-btnwrap
+				//- 	label.label  
+				//- 	.frm-btn
+				//- 		input.btn.btn-default.frm-btn-submit(type="submit" name="ctl00$mainContent$ctl04$btnSubmit" value="Gửi" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$mainContent$ctl04$btnSubmit", "", true, "formwizard76fa71ec-9aa7-46d0-b7b0-dec71e4bc7be", "", false, false))')
+				//- 		input.btn.btn-default.frm-btn-reset( type="reset" value="Xóa")
+				//- 		input(type="hidden" )
+				//- .clear
+				.frm-btnwrap
+					.frm-btn
+						a(href="#").btn.btn-reg Đăng kí

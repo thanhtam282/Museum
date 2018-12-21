@@ -14,6 +14,9 @@
 		width: 100%
 		z-index: 999
 		transition: all .25s ease-in-out
+	.sub-link
+		+media-breakpoint-down(md)
+			display: none
 	.searchbar
 		+pad(1rem)
 		color: lighten(color-get($mau,main),30%)
@@ -31,9 +34,13 @@
 		color: color-get($mau,main)
 		.k-button-toggle
 			color: color-get($mau,main)
+			text-align: right
+			border: 0
 		.navbar-brand
 			img
 				max-height: 2rem
+			+media-breakpoint-down(md)
+				margin: 0
 		.nav
 			.nav-item
 				.nav-link
@@ -71,6 +78,21 @@
 					.nav-link, .nav-top-link
 						text-decoration: none
 						color: color-get($mau,main-dark)
+					.sub-link
+						+media-breakpoint-up(lg)
+							transform: scaleY(1)
+							transform-origin: top left
+							+pad(0 .5rem)
+							// width: 10rem
+							a
+								border-bottom:  1px solid color-rgba(color-get($mau,text-9),.5)
+								&:last-child()
+									border-bottom: 0
+								&:hover, &.active
+									color: color-get($mau,main-dark)
+									text-decoration: none
+						
+
 				.nav-link
 					span
 						padding: 0
@@ -102,49 +124,120 @@
 					border: 1px solid color-get($mau,main)
 					background: color-get($mau, main)
 					border-radius:  0 0.25rem 0.25rem 0
+					cursor: pointer
+
 					i
 						color: lighten(color-get($mau,main),30%)
 		.k-menu-bar
 			.k-button-toggle
 				color: color-get($mau,main)
-		.register
-			@media (max-width:992px)
-				padding: 1rem 0
-				a
-					span
-						border-radius: 4px
-						+transition(.3s all ease-in-out)
-						+flex-center()
-						flex-direction: column-reverse
-						background: color-get($mau, main-dark)
-						margin: 0 auto
-						position: relative
-						height: 100%
-						font-size: 1rem
-						text-transform: uppercase
-						text-align: center
-						width: 200px
-						+pad(null r(12px) r(12px))
-						color: color-get($mau,main-light)
-						&:after
-							+transition(0s all ease-in-out)
-							display: block
-							top: .5rem
-							content: "\e85e"
-							font-family: "Linearicons-Free"
-							color: color-get($mau,main-light)
-							font-size: 2rem
-						&:hover
-							color: color-get($mau, main-light)
+	.register
+		@media (max-width:485px)
 			a
 				span
-					color: color-get($mau,main-light)
-					padding: 0.5rem 1rem
+					font-size: 0 !important
+
+		@media (max-width:992px)
+			// padding: 1rem 0
+			a
+				span
+					border-radius: 4px
+					+transition(.3s all ease-in-out)
+					+flex-center()
+					// background: color-get($mau, main-dark)
+					margin: 0 auto
+					position: relative
+					height: 100%
+					// font-size: 0
+					font-size: 1rem
+					text-transform: uppercase
+					text-align: center
+					// width: 200px
+					// +pad(null r(12px) r(12px))
+					color: color-get($mau,main)
+					&:after
+						+transition(0s all ease-in-out)
+						display: block
+						top: .5rem
+						content: "\e85e"
+						font-family: "Linearicons-Free"
+						color: color-get($mau,main)
+						font-size: r(24px)
+						padding-left: 1rem
 					&:hover
-						color: color-get($mau,main-light)
-						text-decoration: none
+						color: color-get($mau, main)
+		a
+			span
+				color: color-get($mau,main)
+				// padding: 0.5rem 1rem
+				&:hover
+					color: color-get($mau,main)
+					text-decoration: none
+			&:hover
+				text-decoration: none
+		+media-breakpoint-down(xs)
+			a
+				span
+					padding-right: 3px
+					font-size: 0
+					&:after
+						+wh(r(25px))
+						background: color-get($mau, main)
+						border-radius: 50%
+						color: color-rgba(color-get($mau,trang),.5)
+						+flex-center()
+						font-size: 1rem
+						padding: 0
+						font-size: r(12px)
+
+	.hotline
+		+media-breakpoint-down(md)
+			a
+				font-size: 0
+				padding-left: 0
+				span
+					font-weight: 600
+					font-size: 1rem
+					padding-left: 3rem
+					position: relative
+					&:after
+						position: absolute
+						left: r(22px)
+						content: "\F3F2"
+						font-family: "Material Design Icons"
+						font-size: 1rem
+						top: -6px
+						display: block
 				&:hover
 					text-decoration: none
+		+media-breakpoint-down(sm)
+			a
+				padding-left: 0
+				font-size: 0
+				span
+					padding-left: 3rem
+					// font-size: 0
+		+media-breakpoint-down(xs)
+			display: flex
+			a
+				span
+					font-size: 0
+					padding-left: r(39px)
+					&:after
+						+wh(r(25px))
+						background: color-get($mau, main)
+						border-radius: 50%
+						left: 1rem
+						top: 0
+						position: relative
+						font-size: r(12px)
+						+flex-center()
+						color: color-rgba(color-get($mau,trang),.5)
+	.navbar-brand
+		img
+			+media-breakpoint-down(xs)
+				max-height: r(40px) !important
+
 
 
 	// CHANGE MENU
@@ -237,6 +330,7 @@
 
 
 				.nav-item
+					position: relative
 					+ .nav-item
 						margin-left: 2rem
 					&.active
@@ -257,6 +351,31 @@
 							color: color-get($mau,main)
 						&.active
 							color: color-get($mau,main)
+					.sub-link
+						transition: .3s all ease-in-out
+						transform: scaleY(0)
+						// transform-origin: top
+						height: auto
+						overflow: hidden
+						position: absolute
+						top: 100%
+						left: -1rem
+						background: color-get($mau, trang)
+						width: 20rem
+						+media-breakpoint-down(md)
+							display: none 
+						a
+							color: #e4b07b
+							+pad(.5rem 0)
+							padding-left: 1rem
+							display: block
+							text-transform: uppercase
+							// white-space: nowrap
+							&:last-child()
+								padding-bottom: 0
+
+
+
 				.search
 					cursor: pointer
 					color: color-get($mau,text-3)
@@ -379,5 +498,5 @@
 			a
 				span
 					@media (max-width:992px)
-						padding:  0.5rem 1rem
+						// padding:  0.5rem 1rem
 
