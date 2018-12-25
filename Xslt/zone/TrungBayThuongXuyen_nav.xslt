@@ -17,9 +17,10 @@
 		<div class="link">
 			<xsl:if test="position() = 1">
 				<xsl:attribute name="class">
-					<xsl:text>link active</xsl:text>
+					<xsl:text>link</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
+			
 			<a>
 				<p>
 					<xsl:if test="IsActive='true'">
@@ -30,9 +31,12 @@
 					<xsl:value-of select="Title"></xsl:value-of>
 				</p>
 			</a>
-			<div class="sub-link">
-				<xsl:apply-templates select="Zone" mode="Zonesub"></xsl:apply-templates>
-			</div>
+			<xsl:if test="count(Zone) &gt; 0">
+
+				<div class="sub-link">
+					<xsl:apply-templates select="Zone" mode="Zonesub"></xsl:apply-templates>
+				</div>
+			</xsl:if>
 
 		</div>
 
