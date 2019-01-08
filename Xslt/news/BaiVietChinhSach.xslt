@@ -5,7 +5,7 @@
 
 
 	<xsl:template match="/">
-		<div class="block-section" bg-img="./img/_global/bg_1.png">
+		<div class="block-section" >
 			<xsl:apply-templates select="/ZoneList/Zone" mode="Content"></xsl:apply-templates>
 		</div>
 

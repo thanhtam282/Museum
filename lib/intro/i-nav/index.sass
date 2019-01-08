@@ -18,10 +18,12 @@
 		ul
 			+flex-center()
 			margin: 0
-			+media-breakpoint-down(md)
-				flex-wrap: wrap
+			flex-wrap: wrap
 			li
 				margin-right: 1px
+				margin-bottom: 1px
+				flex: 0 0 32.3333%
+
 				a
 					+flex-center()
 					text-align: center
@@ -30,13 +32,17 @@
 					+wh(100%)
 					+pad(r(12px) r(16px))
 					+fz(r(18px))
+					transition: .3s all ease-in-out
 					color: color-get($mau,text-3)
 					&:hover
 						text-decoration: none
 					&.active
 						background: color-get($mau, main)
 						color: color-get($mau,trang)
-					
+					&.active, &:hover
+						background: color-get($mau, main)
+						color: color-get($mau,trang)
+
 				&:last-child
 					margin: 0
 				+media-breakpoint-down(md)

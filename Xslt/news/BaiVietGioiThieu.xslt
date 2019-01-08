@@ -11,8 +11,9 @@
 	<xsl:template match="Zone">
 		<xsl:choose>
 			<xsl:when test="position() = 1">
-				<xsl:text disable-output-escaping="yes">&lt;div  bg-img=&quot;/Data/Sites/1/skins/default/img/_global/bg_1.png&quot;&gt;</xsl:text>
-				<section class="canhcam-intro-2" bg-img="./img/_global/bg_1.png">
+				<xsl:text disable-output-escaping="yes">&lt;div
+					bg-img=&quot;/Data/Sites/1/skins/default/img/_global/bg_1.png&quot;&gt;</xsl:text>
+				<section class="canhcam-intro-2">
 					<div class="container">
 						<div class="row">
 							<div class="col">
@@ -94,7 +95,68 @@
 				</section>
 			</xsl:when>
 			<xsl:when test="position() = 4">
-				<section class="canhcam-intro-5" id="intro-4">
+
+				<section class="canhcam-intro-6" id="intro-4">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<h3 class="head-title">
+									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+
+									</h3>
+								</div>
+							</div>
+							<div class="row item">
+									<xsl:apply-templates select='News' mode="Zone5AnPham"></xsl:apply-templates>
+
+							</div>
+							<div class="row">
+								<div class="col-2 mx-auto">
+									<a class="btn-more" href="~/an-pham-1" >Xem Tất Cả
+
+			
+								</a>
+							</div>
+							</div>
+						</div>
+					</section>
+			</xsl:when>
+			<xsl:when test="position() = 5">
+
+				<section class="canhcam-intro-7" id="intro-5">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<h3 class="head-title">
+									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+
+								</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="table-responsive">
+									<table class="table-bordered">
+										<thead>
+											<tr>
+												<th>lorem</th>
+												<th>lorem</th>
+												<th>lorem</th>
+											</tr>
+										</thead>
+										<tbody>
+											<xsl:apply-templates select='News' mode="Zone5"></xsl:apply-templates>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</xsl:when>
+
+			<xsl:when test="position() = 6">
+				<section class="canhcam-intro-5" id="intro-6">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-4">
@@ -177,10 +239,10 @@
 	</xsl:template>
 
 	<xsl:template match="News" mode="Zone2Content1">
-		<div class="col-lg-6" >
+		<div class="col-lg-6">
 			<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 		</div>
-		<div class="col-lg-6" >
+		<div class="col-lg-6">
 			<figure bg-img="./img/01_gioithieu/gioithieu_giamdoc.png">
 				<xsl:attribute name="bg-img">
 					<xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>
@@ -349,4 +411,54 @@
 			</div>
 		</xsl:if>
 	</xsl:template>
-</xsl:stylesheet>
+	<xsl:template match="News" mode="Zone5AnPham">
+			<!--item-->
+	
+			<div class="col-lg-4">
+				<a class="image" >
+					<xsl:attribute name='href'>
+						<xsl:value-of select='Url'></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name='target'>
+						<xsl:value-of select='Title'></xsl:value-of>
+					</xsl:attribute>
+					<figure>
+						<div class="img">
+							<img>
+							<xsl:attribute name='src'>
+								<xsl:value-of select='ImageUrl'></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name='alt'>
+								<xsl:value-of select='Title'></xsl:value-of>
+							</xsl:attribute>
+							</img>
+						</div>
+						<figcaption>
+							<h3> 
+									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+	
+							</h3>
+						</figcaption>
+					</figure>
+				</a>
+				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+	
+			</div>
+	
+	
+		</xsl:template>
+		<xsl:template match='News' mode="Zone5">
+				<tr>
+						<td>
+							<xsl:value-of select='Title'></xsl:value-of>
+						</td>
+						<td>
+							<xsl:value-of select='BriefContent'></xsl:value-of>
+						</td>
+						<td>
+							<xsl:value-of select='FullContent'></xsl:value-of>
+						</td>
+					</tr>
+		</xsl:template>
+	
+	</xsl:stylesheet>

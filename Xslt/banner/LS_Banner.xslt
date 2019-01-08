@@ -8,11 +8,19 @@
 	</xsl:template>
 
 	<xsl:template match="Banner">
+	<a>
+	<xsl:attribute name='href'>
+		<xsl:value-of select='Url'></xsl:value-of>
+	</xsl:attribute>
+	<xsl:attribute name='target'>
+		<xsl:value-of select='Title'></xsl:value-of>
+	</xsl:attribute>
 	      <section class="canhcam-intro-1" >
 			<xsl:attribute name="bg-img">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
 			</xsl:attribute>
 		  </section>
+	</a>
 
 
 

@@ -12,7 +12,7 @@
 	<xsl:template match="Zone">
 
 		<li class="nav-item">
-			<xsl:if test="position() = 1 ">
+			<!-- <xsl:if test="position() = 1 ">
 				<a class="nav-link">
 					<xsl:if test="IsActive='true'">
 						<xsl:attribute name="class">
@@ -27,8 +27,8 @@
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 					</span>
 				</a>
-			</xsl:if>
-			<xsl:if test="position() &gt; 1 ">
+			</xsl:if> -->
+			<!-- <xsl:if test="position() &gt; 1 "> -->
 				<xsl:if test="count(Zone)>0">
 
 					<a class="nav-link">
@@ -60,7 +60,7 @@
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 					</a>
 				</xsl:if>
-			</xsl:if>
+			<!-- </xsl:if> -->
 		</li>
 
 

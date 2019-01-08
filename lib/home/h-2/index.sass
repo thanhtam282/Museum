@@ -105,6 +105,13 @@
 				position: relative
 				margin: 0
 				.img
+					max-height: r(230px)
+					overflow: hidden
+					display: flex
+					img
+						object-fit: contain
+						+wh(100%)
+
 				figcaption
 					+pad(1rem)
 					position: absolute

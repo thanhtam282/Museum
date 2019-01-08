@@ -40,8 +40,8 @@ Facebook: https://fb.com/canhcam.vn
 	<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=vietnamese" rel="stylesheet">
 	<meta name="msapplication-TileColor">
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 	<meta name="theme-color">
@@ -114,7 +114,9 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 						<div class="wrapper">
 							<portal:ModuleWrapper ID="mdl145" runat="server" ConfigureModuleId="145" />
 
-							<a class="search"> <i class="material-icons">search</i></a>
+							<a class="search"> 
+								<i class="material-icons">search</i>
+							</a>
 							<portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" />
 
 						</div>

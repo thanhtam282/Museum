@@ -16,9 +16,9 @@
 				br
 					display: none
 	.fill_info
-		background: #ebebeb
 		padding-top: r(40px)
 	.info
+		background: #ebebeb
 		border-radius: r(10px)
 		+pad(2rem 1rem 2rem 1.5rem)
 		height: 100%
@@ -61,6 +61,8 @@
 				max-width: 100%
 				flex: 0 0 100%
 			+media-breakpoint-down(xs)
+				flex: 0 0 100%
+				max-width: 100%
 				.form-group:nth-child(even)
 					padding-left: .5rem
 				.form-group:nth-child(odd)
@@ -172,6 +174,45 @@
 		// .send
 		// 	align-items: center
 		// 	justify-content: flex-end
+	.qdropdown
+		select
+			height: 40px
+			width: 100%
+			border: 0
+			color: color-get($mau,text-6)
+			background: #ebebeb
+			+pad(0 1rem )
+			border-radius:  0.25rem
+	.qdatetime
+		.rcTable
+			width: 100%
+			position: relative
+			tr
+				td
+
+					&:first-child
+						padding: 0
+						height: 40px
+						width: 100%
+						border: 0
+						color: color-get($mau,text-6)
+						background: #ebebeb
+						// +pad(0 1rem )
+						border-radius:  0.25rem
+						input
+							font-style: normal
+							font-family: "MyriadPro"
+					+ td
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: 2rem
+					&:last-child
+						right: .5rem
+		.RadDateTimePicker
+			width: 100% !important
+
+
 .Module-202
 	.ModuleContent
 		height: 100%

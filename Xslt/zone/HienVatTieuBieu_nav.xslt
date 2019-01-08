@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<!-- <section class="canhcam-collect-bvqg-1" bg-img="./img/_global/bg_1.png">
+		<!-- <section class="canhcam-collect-bvqg-1" >
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3"> -->
@@ -34,6 +34,9 @@
 		<li class="nav-item ">
 		
 			<a class="nav-link">
+				<xsl:attribute name="href">
+					<xsl:value-of select="Url"></xsl:value-of>
+				</xsl:attribute>
 
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>

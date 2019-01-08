@@ -1,0 +1,52 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-intro-7
+	background: color-get($mau, bg-1)
+
+	+pad(3rem null)
+	+media-breakpoint-down(sm)
+		+pad(2rem null 3rem null)
+	.head-title
+		+fz(r(30px))
+		font-family: 'Open Sans'
+		text-align: center
+		strong
+			font-weight: bold
+		+pad(r(25px) null)
+		+media-breakpoint-down(sm)
+			+fz(1.9rem)
+		&:after
+			display: block
+			position: absolute
+			content: ""
+			width: 3rem
+			height: 1px
+			left: 50%
+			transform: translateX(-50%)
+			top: 0
+			background: color-get($mau, den)
+	.table-responsive
+		table
+			width: 100%
+			thead
+				background: color-get($mau, main)
+				color: color-get($mau,trang)
+				tr
+					th
+						height: r(40px)
+						padding: 0 1rem
+						+ th
+							text-align: center
+
+			tbody
+				tr
+					td
+						white-space: nowrap
+						height: r(40px)
+						padding: 0 1rem
+						+ td
+							text-align: center
+

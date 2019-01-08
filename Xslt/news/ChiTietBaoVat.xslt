@@ -5,7 +5,7 @@
 
 	<!--Begin News-->
 	<xsl:template match="/">
-		<section class="canhcam-gallery-details-1" bg-img="./img/_global/bg_1.png">
+		<section class="canhcam-gallery-details-1" >
 			<article class="product-details">
 				<div class="container">
 					<div class="row d-flex">

@@ -34,7 +34,7 @@
 	<!--Begin News Child-->
 	<xsl:template match="News">
 		<!--item-->
-		<div class="col-lg-4 "  data-aos="flip-up" data-aos-duration="1500" style="position: initial; z-index: -1;">
+		<div class="col-lg-4 "  data-aos="flip-up" data-aos-duration="1500">
 			<a class="link-item" >
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>

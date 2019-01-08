@@ -70,18 +70,38 @@
 		+pad( null null r(37px) null)
 		+fz(r(15px))
 	.item
-		figure
-			padding: .3rem 1rem
-			overflow: hidden
-			+flex-center()
-			border-radius: 4px
-			border: 1px solid  rgb(211, 211, 211)
-			margin-bottom: r(30px)
-			img
-				border-radius: 4px
-				margin: 0 auto
-				display: flex
-				height: r(143px)
-				+media-breakpoint-down(md)
-					height: 8.5rem
+		a
+			figure
+				margin-bottom: r(30px)
+				flex-direction: column
+				.img
+					+flex-center()
+					overflow: hidden
+					padding: .3rem 1rem
+					border-radius: 4px
+					border: 1px solid  rgb(211, 211, 211)
+					img
+						border-radius: 4px
+						margin: 0 auto
+						display: flex
+						height: r(143px)
+						+media-breakpoint-down(md)
+							height: 8.5rem
+				figcaption
+					margin-top: 1rem
+					h3
+						text-align: center
+						font-size: 1.2rem
+						line-height: 1.5rem
+						height: 3rem
+						overflow: hidden
+						color: color-get($mau,main)
+						-webkit-line-clamp: 2
+						overflow: hidden
+						display: -webkit-box
+						text-overflow: ellipsis
+						-webkit-box-orient: vertical
+
+			&:hover
+				text-decoration: none
 				

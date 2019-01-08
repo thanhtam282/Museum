@@ -15,11 +15,17 @@
 		text-align: center
 		&:last-child
 			padding-right: 0
+		margin-right: 1px
+		margin-bottom: 1px
+		flex: 0 0 32.3333%
 		+media-breakpoint-down(md)
-			flex: 0	0 50%
-			margin-top: 1px
-		+media-breakpoint-down(xs)
-			flex: 0	0 80%
+			flex: 0 0 50%
+			margin: 0
+			padding: 1px
+		+media-breakpoint-down(sm)
+			flex: 0 0 100%
+			margin: 0
+			padding: 1px
 		.nav-link
 			border: 0
 			border-radius: 0
@@ -27,10 +33,13 @@
 			+fz(r(20px))
 			color: color-get($mau,text-3)
 			+pad(.5rem r(60px) )
+			+media-breakpoint-down(lg)
+				+pad(.5rem 2.3rem )
 			display: block
 			background: color-get($mau, bg-xam)
+			transition: .3s all ease-in-out
 			+media-breakpoint-down(sm)
 				padding: 1rem
-		.nav-link.active
-			background: color-get($mau, main)
-			color: color-get($mau,trang)
+			&.active, &:hover
+				background: color-get($mau, main)
+				color: color-get($mau,trang)
