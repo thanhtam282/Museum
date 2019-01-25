@@ -111,6 +111,8 @@
 					img
 						object-fit: contain
 						+wh(100%)
+						transition: .3s all ease-in-out
+						transform: scale(1.01)
 
 				figcaption
 					+pad(1rem)
@@ -125,6 +127,10 @@
 						color: color-get($mau,trang)
 			&:hover
 				text-decoration: none
+				+media-breakpoint-up(lg)
+					img
+						transform: scale(1.1) !important
+
 
 		.sub-news
 			+pad(r(13px) r(13px) r(13px) 0)
@@ -138,9 +144,13 @@
 					-webkit-box-orient: vertical
 					+fz(1rem)
 					margin: 0
+					transition: .3s all ease-in-out
 					color: color-get($mau,text-6)
 				&:hover
 					text-decoration: none
+					+media-breakpoint-up(lg)
+						h5
+							color: color-get($mau,main)
 
 
 	.event

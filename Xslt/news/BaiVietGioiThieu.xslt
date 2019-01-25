@@ -97,29 +97,31 @@
 			<xsl:when test="position() = 4">
 
 				<section class="canhcam-intro-6" id="intro-4">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<h3 class="head-title">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<h3 class="head-title">
 									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 
-									</h3>
-								</div>
-							</div>
-							<div class="row item">
-									<xsl:apply-templates select='News' mode="Zone5AnPham"></xsl:apply-templates>
-
-							</div>
-							<div class="row">
-								<div class="col-2 mx-auto">
-									<a class="btn-more" href="~/an-pham-1" >Xem Tất Cả
-
-			
-								</a>
-							</div>
+								</h3>
 							</div>
 						</div>
-					</section>
+						<div class="row item">
+							<xsl:apply-templates select='News' mode="Zone5AnPham"></xsl:apply-templates>
+
+						</div>
+						<div class="row">
+							<div class="col-2 mx-auto">
+								<a class="btn-more" href="~/an-pham">
+									<xsl:attribute name='target'>
+										<xsl:value-of select='Title'></xsl:value-of>
+									</xsl:attribute>
+									Xem Tất Cả
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
 			</xsl:when>
 			<xsl:when test="position() = 5">
 
@@ -135,20 +137,8 @@
 						</div>
 						<div class="row">
 							<div class="col">
-								<div class="table-responsive">
-									<table class="table-bordered">
-										<thead>
-											<tr>
-												<th>lorem</th>
-												<th>lorem</th>
-												<th>lorem</th>
-											</tr>
-										</thead>
-										<tbody>
-											<xsl:apply-templates select='News' mode="Zone5"></xsl:apply-templates>
-										</tbody>
-									</table>
-								</div>
+								<xsl:apply-templates select='News' mode="Zone5"></xsl:apply-templates>
+
 							</div>
 						</div>
 					</div>
@@ -412,53 +402,64 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="News" mode="Zone5AnPham">
-			<!--item-->
-	
-			<div class="col-lg-4">
-				<a class="image" >
+		<!--item-->
+
+		<div class="col-lg-4">
+			<a class="image">
+				<xsl:attribute name='href'>
+					<xsl:value-of select='Url'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name='target'>
+					<xsl:value-of select='Title'></xsl:value-of>
+				</xsl:attribute>
+				<figure>
+					<div class="img">
+						<img>
+						<xsl:attribute name='src'>
+							<xsl:value-of select='ImageUrl'></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name='alt'>
+							<xsl:value-of select='Title'></xsl:value-of>
+						</xsl:attribute>
+						</img>
+					</div>
+					<figcaption>
+						<h3>
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+
+						</h3>
+					</figcaption>
+				</figure>
+			</a>
+			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+
+		</div>
+
+
+	</xsl:template>
+	<xsl:template match='News' mode="Zone5">
+
+		<div class="row">
+			<div class="col">
+				<xsl:value-of select="FullContent" disable-output-escaping="yes" ></xsl:value-of>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2 mx-auto">
+				<a class="btn-more">
 					<xsl:attribute name='href'>
-						<xsl:value-of select='Url'></xsl:value-of>
+						<xsl:value-of select='BriefContent'></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name='target'>
-						<xsl:value-of select='Title'></xsl:value-of>
+						<xsl:value-of select='Target'></xsl:value-of>
 					</xsl:attribute>
-					<figure>
-						<div class="img">
-							<img>
-							<xsl:attribute name='src'>
-								<xsl:value-of select='ImageUrl'></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name='alt'>
-								<xsl:value-of select='Title'></xsl:value-of>
-							</xsl:attribute>
-							</img>
-						</div>
-						<figcaption>
-							<h3> 
-									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-	
-							</h3>
-						</figcaption>
-					</figure>
+					Xem Tất Cả
+
 				</a>
-				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-	
 			</div>
-	
-	
-		</xsl:template>
-		<xsl:template match='News' mode="Zone5">
-				<tr>
-						<td>
-							<xsl:value-of select='Title'></xsl:value-of>
-						</td>
-						<td>
-							<xsl:value-of select='BriefContent'></xsl:value-of>
-						</td>
-						<td>
-							<xsl:value-of select='FullContent'></xsl:value-of>
-						</td>
-					</tr>
-		</xsl:template>
-	
-	</xsl:stylesheet>
+		</div>
+	</xsl:template>
+
+</xsl:stylesheet>

@@ -16,7 +16,7 @@
 			padding-bottom: 1rem
 			position: relative
 			// z-index: -1
-			i
+			i, em
 				position: relative
 				// z-index: -1
 				text-align: right
@@ -33,9 +33,9 @@
 				overflow: hidden
 				display: flex
 				max-height: r(200px)
+				transition: .5s all ease-in-out
 				img
 					object-fit: contain
-					transition: .5s all ease-in-out
 			figcaption
 				h4
 					+pad(r(17px) null r(20px) null)
@@ -69,7 +69,6 @@
 			+media-breakpoint-up(lg)
 				.item
 					.img
-						
+						transform: translateY(-10px)
 						img
-							transform: scale(1.1)
 

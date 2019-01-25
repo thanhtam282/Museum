@@ -48,7 +48,8 @@
 						<div class="col-lg-3" data-aos="fade-up" data-aos-duration="2000">
 							<div class="othernews" data-fix="80" data-fix-type="initial" data-fix-change="sticky">
 								<h2>
-									TIN TỨC KHÁC
+								<xsl:value-of select='/NewsDetail/NewsOtherText'></xsl:value-of>
+
 								</h2>
 								<hr/>
 

@@ -15,19 +15,32 @@
 				position: relative
 				.img
 					overflow: hidden
+					height: r(265px)
 					img
+						object-fit: cover
 						transition: .5s all ease-in-out
+						height: 100%
 				figcaption
 					position: relative
 					// +pos(abs, null null null null)
 					color: color-get($mau,trang)
 					background: color-get($mau, main)
 					width: 100%
-					height: r(75px)
 					+flex-center()
 					h3
+						width: 100%
 						margin: 0
 						+fz(19px)
+						margin: 0
+						padding:  1rem 1rem 
+						height: r(72px)
+						display: flex
+						align-items: center
+						-webkit-line-clamp: 2
+						overflow: hidden
+						text-overflow: ellipsis
+						-webkit-box-orient: vertical
+						justify-content: center
 
 			+media-breakpoint-up(md)
 				&:hover

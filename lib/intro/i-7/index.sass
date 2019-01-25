@@ -50,3 +50,17 @@
 						+ td
 							text-align: center
 
+	.btn-more
+		margin-top: 1.5rem
+		+flex-center()
+		height: r(40px)
+		background: color-get($mau, main)
+		color: color-get($mau,trang)
+		transition: .3s all ease-in-out
+		font-size: 1.2rem
+		&:hover
+			text-decoration: none
+			+media-breakpoint-up(lg)
+				color: color-get($mau,main)
+				box-shadow: 0px 0px 0px 2px color-get($mau,main) inset
+				background: #fff

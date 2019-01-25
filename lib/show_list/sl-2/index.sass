@@ -24,11 +24,21 @@
 					color: color-get($mau,trang)
 					background: color-get($mau, main)
 					width: 100%
-					height: r(40px)
 					+flex-center()
 					h3
 						+fz(18px)
+						width: 100%
 						margin: 0
+						padding:  .5rem 1rem 
+						height: r(56px)
+						display: flex
+						align-items: center
+						-webkit-line-clamp: 2
+						overflow: hidden
+						text-overflow: ellipsis
+						-webkit-box-orient: vertical
+						justify-content: center
+
 
 			+media-breakpoint-up(md)
 				&:hover

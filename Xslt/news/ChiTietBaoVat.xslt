@@ -5,7 +5,7 @@
 
 	<!--Begin News-->
 	<xsl:template match="/">
-		<section class="canhcam-gallery-details-1" >
+		<section class="canhcam-gallery-details-1">
 			<article class="product-details">
 				<div class="container">
 					<div class="row d-flex">
@@ -18,6 +18,31 @@
 							</h1>
 							<hr />
 							<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
+							<div class="social-networks nav">
+
+								<div class="nav-item">
+									<div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true">
+										<a class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ
+										</a>
+									</div>
+								</div>
+								<div class="nav-item">
+									<a class="twitter-share-button" href="https://twitter.com/share" data-size="medium" data-text="custom share text"
+									 data-url="" data-via="twitterdev" data-related="twitterapi,twitter">Tweet
+									</a>
+								</div>
+								<div class="nav-item">
+									<div class="g-plusone" data-size="tall">
+									</div>
+								</div>
+								<div class="nav-item">
+									<script src="//platform.linkedin.com/in.js" type="text/javascript">
+										lang: en_US
+
+									</script>
+									<script type="IN/Share"></script>
+								</div>
+							</div>
 						</div>
 						<div class=" col-lg-6 order-md-1 slider-img">
 							<article class="slider-for">
@@ -40,7 +65,8 @@
 					<div class="row">
 						<div class="col">
 							<h3 class="title-detail">
-								NỘI DUNG
+								<xsl:value-of select='/NewsDetail/ContentTitle'></xsl:value-of>
+
 							</h3>
 						</div>
 					</div>
@@ -55,7 +81,10 @@
 
 					<div class="row">
 						<div class="col">
-							<h3 class="other">hiện vật khác</h3>
+							<h3 class="other">
+								<xsl:value-of select='/NewsDetail/OtherContent'></xsl:value-of>
+
+							</h3>
 						</div>
 					</div>
 					<div class="row">
