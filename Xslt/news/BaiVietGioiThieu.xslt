@@ -111,8 +111,12 @@
 
 						</div>
 						<div class="row">
-							<div class="col-2 mx-auto">
-								<a class="btn-more" href="~/an-pham">
+							<div class="col-6 col-lg-2 mx-auto">
+								<a class="btn-more">
+								<xsl:attribute name='href'>
+									<xsl:value-of select='/ZoneList/PublicationsLink'></xsl:value-of>
+
+								</xsl:attribute>
 									<xsl:attribute name='target'>
 										<xsl:value-of select='Target'></xsl:value-of>
 									</xsl:attribute>
@@ -448,7 +452,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-2 mx-auto">
+			<div class="col-6 col-lg-2 mx-auto">
 				<a class="btn-more">
 					<xsl:attribute name='href'>
 						<xsl:value-of select='BriefContent'></xsl:value-of>

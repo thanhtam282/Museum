@@ -34,9 +34,14 @@
 						</xsl:text>
 					</xsl:attribute>
 				</xsl:if>
-				<xsl:attribute name="bg-img">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				<img>
+				<xsl:attribute name='src'>
+					<xsl:value-of select='ImageUrl'></xsl:value-of>
 				</xsl:attribute>
+				<xsl:attribute name='alt'>
+					<xsl:value-of select='Title'></xsl:value-of>
+				</xsl:attribute>
+				</img>
 
 			</div>
 		</a>
