@@ -12,26 +12,34 @@
 	</xsl:template>
 
 	<xsl:template match="Banner">
-		<div class="item">
-			<xsl:if test="position() = 1 ">
-				<xsl:attribute name="data-thumb">
-					<xsl:text disable-output-escaping="yes">
-						Trưng bày thường xuyên
-					</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
-			<xsl:if test="position() = 2 ">
-				<xsl:attribute name="data-thumb">
-					<xsl:text disable-output-escaping="yes">
-						Trưng bày ngắn hạn
-					</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
-			<xsl:attribute name="bg-img">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
+		<a>
+			<xsl:attribute name='href'>
+				<xsl:value-of select='Url'></xsl:value-of>
 			</xsl:attribute>
+			<xsl:attribute name='target'>
+				<xsl:value-of select='Target'></xsl:value-of>
+			</xsl:attribute>
+			<div class="item">
+				<xsl:if test="position() = 1 ">
+					<xsl:attribute name="data-thumb">
+						<xsl:text disable-output-escaping="yes">
+							Trưng bày thường xuyên
+						</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
+				<xsl:if test="position() = 2 ">
+					<xsl:attribute name="data-thumb">
+						<xsl:text disable-output-escaping="yes">
+							Trưng bày ngắn hạn
+						</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
+				<xsl:attribute name="bg-img">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
 
-		</div>
+			</div>
+		</a>
 
 
 	</xsl:template>

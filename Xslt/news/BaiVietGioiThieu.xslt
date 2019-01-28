@@ -114,9 +114,10 @@
 							<div class="col-2 mx-auto">
 								<a class="btn-more" href="~/an-pham">
 									<xsl:attribute name='target'>
-										<xsl:value-of select='Title'></xsl:value-of>
+										<xsl:value-of select='Target'></xsl:value-of>
 									</xsl:attribute>
-									Xem Tất Cả
+									<xsl:value-of select='/ZoneList/ViewAllText'></xsl:value-of>
+
 								</a>
 							</div>
 						</div>
@@ -455,7 +456,7 @@
 					<xsl:attribute name='target'>
 						<xsl:value-of select='Target'></xsl:value-of>
 					</xsl:attribute>
-					Xem Tất Cả
+						<xsl:value-of select='/ZoneList/ViewAllText'></xsl:value-of>
 
 				</a>
 			</div>
