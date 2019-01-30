@@ -164,7 +164,10 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 				<article class="info">
 					<div class="container">
 							<portal:ModuleWrapper ID="mdl151" runat="server" ConfigureModuleId="151" />
-							<p>Copyright © 2018 BẢO TÀNG LỊCH SỬ Tp. HỒ CHÍ MINH. All rights reserved. Design by Canh Cam.</p>
+							<h3 class="copy">Copyright © 2018 
+								<portal:ModuleWrapper ID="mdl260" runat="server" ConfigureModuleId="260" />
+								<span> All rights reserved. Design by Canh Cam.</span>
+							</h3 class="copy">
 					</div>
 				</article>
 			</footer>
