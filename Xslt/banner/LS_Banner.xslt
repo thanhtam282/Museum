@@ -4,23 +4,28 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-				<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
+		<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 	</xsl:template>
 
 	<xsl:template match="Banner">
-	<a>
-	<xsl:attribute name='href'>
-		<xsl:value-of select='Url'></xsl:value-of>
-	</xsl:attribute>
-	<xsl:attribute name='target'>
-		<xsl:value-of select='Title'></xsl:value-of>
-	</xsl:attribute>
-	      <section class="canhcam-intro-1" >
-			<xsl:attribute name="bg-img">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
+		<a>
+			<xsl:attribute name='href'>
+				<xsl:value-of select='Url'></xsl:value-of>
 			</xsl:attribute>
-		  </section>
-	</a>
+			<xsl:attribute name='target'>
+				<xsl:value-of select='Title'></xsl:value-of>
+			</xsl:attribute>
+			<section class="canhcam-intro-1">
+				<img class='img-fluid'>
+				<xsl:attribute name='src'>
+					<xsl:value-of select='ImageUrl'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name='alt'>
+					<xsl:value-of select='Title'></xsl:value-of>
+				</xsl:attribute>
+				</img>
+			</section>
+		</a>
 
 
 

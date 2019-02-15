@@ -82,22 +82,7 @@
 					<div class="row">
 						<div class="col">
 							<h3 class="other">
-								<xsl:value-of select='/NewsDetail/ZoneTitle'></xsl:value-of>
-								<xsl:choose>
-									<xsl:when test="floor(ShowOption div 1) mod 2 = 1">
-										<xsl:value-of select='/NewsDetail/OtherThematicPast'></xsl:value-of>
-									</xsl:when>
-									<xsl:when test="floor(ShowOption div 2) mod 2 = 1">
-										<xsl:value-of select='/NewsDetail/OtherThematicPresent'></xsl:value-of>
-									</xsl:when>
-									<xsl:when test="floor(ShowOption div 4) mod 2 = 1">
-										<xsl:value-of select='/NewsDetail/OtherThematicFuture'></xsl:value-of>
-									</xsl:when>
-									<!-- <xsl:otherwise >
-											<xsl:value-of select='/NewsDetail/OtherContent'></xsl:value-of>
-										</xsl:otherwise> -->
-
-								</xsl:choose>
+								<xsl:value-of select='/NewsDetail/OtherThematicFuture'></xsl:value-of>
 
 							</h3>
 						</div>
